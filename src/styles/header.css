@@ -1,0 +1,27 @@
+.divHeader{
+    padding: 20px;
+    height: 250px;
+    width:  1280px;
+    margin:0 auto 0 auto;
+}
+.header{
+  width: auto;
+  height: 276px;
+  background-image: url("https://i.pinimg.com/originals/07/df/40/07df40e7af2ec99e95d3c6eb073526b5.jpg");
+  border: 3px solid  rgb(255, 255, 255); /*Borde del botón*/
+  background-position: left;   /*Posición de la imagen dentro del header*/
+  background-color: #b3b5cf;
+  border-radius: 50px; /*Curvatura en las esquinas de la clase css*/
+  background-repeat: repeat;  /*No repetir la imagen*/   
+}
+.textHeader{
+  width: 1280px;
+  font-family: Times New Roman;
+  font-size: 65px;  /*Tamaño de la fuente de la letra*/
+  color: #ffff00;
+  font-weight: bold;
+  text-shadow: 5px 5px 5px rgb(0, 0, 0); 
+  text-align: center;  /*Ubicación del texto*/
+  position: relative;
+  margin: auto;
+}

@@ -1,0 +1,24 @@
+.divButtonNav{
+    height: 50px;
+    width: 1280px;
+    margin: auto;
+    display: flex;  /*Flex: Ubica todos los botones en una sola fila*/
+    position: sticky; top:0; /*Mantinene el div anclado a la parte superior de la página mientras se hace scroll*/
+}
+.buttonNav{
+  background-color: #00ff0d;
+  color: #000C66;
+  font-weight: bold;
+  /*text-align: center;*/
+  border: 3px solid  rgb(255, 255, 255); /*Borde del botón*/
+  font-size: 16px;  /*Tamaño de letra*/
+  border-radius: 10px;
+  padding: 5px 10px; /*Padding interno del botón*/
+  cursor: pointer; /*Animación al pasar el cursor sobre el botón*/
+  transition-duration: 0.4s;  /*Velocidad de transición al :hover*/
+}
+.buttonNav:hover{
+  background-color: white; 
+  border: 2px solid #005BEA;
+  box-shadow: 0 12px 16px 0 rgba(202, 255, 8, 0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
