@@ -1,0 +1,69 @@
+.divSeccTwoAGen{
+  width: 75.9vw;  
+  border-radius: 2.96vw;
+  background-color: aqua;
+  border: 0.118vw solid #ffff00;
+}
+.widthDivTextB{
+  width: 73.53vw;
+}
+.textSeccTwoA{
+  margin: 1em;  
+  font-family: Times New Roman;
+  color: #000000;
+  font-size: 1.18vw;  /*Tamaño de la fuente de la letra*/ 
+  text-align: justify; /*Ubicación del texto*/  
+  text-justify: inter-word;
+}
+.videoTwoA{ 
+  width: 73.65vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+.divSeccTwoA{
+  padding: 0.889vw;
+  margin: 1em;
+  float: left;
+  top: 0;
+}
+.divSeccTwoB{
+  padding: 2.37vw;
+  margin: 1em;
+  float: right;
+  top: 0;
+}
+.images-container {
+  background-image: url("https://imgv2-1-f.scribdassets.com/img/document/167169025/original/610c6ae3b3/1662412553?v=1");
+  background-repeat: no-repeat; 
+
+}
+.container-enlarge {
+  z-index: 0;
+}
+.container-enlarge > img {  /*Configuración de la imagen sin ampliar*/
+  width: 32.61vw;
+  height: 22.53vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.addImg {  /*Configuración de la imagen sin ampliar*/
+  width: 32.61vw;
+  height: 22.53vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-enlarge span {
+  position: relative;
+  top: -9999em;
+  left: -9999em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-enlarge:hover span { /*Ubicación de la imagen ampliada*/
+  top: 5vw;
+  left: -25vw;
+}
