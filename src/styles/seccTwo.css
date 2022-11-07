@@ -1,8 +1,8 @@
 .divSeccTwoAGen{
-  width: 75.9vw;  
-  border-radius: 2.96vw;
+  width: var(--widthMain);  
+  border-radius: var(--radius);
   background-color: aqua;
-  border: 0.118vw solid #ffff00;
+  border: var(--borderSecundary) solid #ffff00;
 }
 .widthDivTextB{
   width: 73.53vw;

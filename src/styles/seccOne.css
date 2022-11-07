@@ -1,8 +1,8 @@
 .divSeccOneA{
   width: 35.58vw;  
-  border-radius: 2.96vw;
+  border-radius: var(--radius);
   background-color: aqua;
-  border: 0.118vw solid #ffff00;
+  border: var(--borderSecundary) solid #ffff00;
   
 }
 .tittleSeccOneA{
@@ -22,9 +22,9 @@
 }
 .divSeccOneB{
   width: 32.61vw;
-  border-radius: 2.96vw;
+  border-radius: var(--radius);
   background-color: aqua;
-  border: 0.118vw solid #ffff00;
+  border: var(--borderSecundary) solid #ffff00;
   float: right;
   top: 0;
 }

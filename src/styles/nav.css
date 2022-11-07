@@ -1,24 +1,24 @@
 .divButtonNav{
-    height: 2.96vw;
-    width: 75.9vw;
-    margin: auto;
-    display: flex;  /*Flex: Ubica todos los botones en una sola fila*/
-    position: sticky; top:0; /*Mantinene el div anclado a la parte superior de la página mientras se hace scroll*/
+  width: var(--widthMain);
+  height: 2.96vw;
+  margin: auto;
+  display: flex;  /*Flex: Ubica todos los botones en una sola fila*/
+  position: sticky; top:0; /*Mantinene el div anclado a la parte superior de la página mientras se hace scroll*/
 }
 .buttonNav{
   background-color: #00ff0d;
   color: #000C66;
   font-weight: bold;
   /*text-align: center;*/
-  border: 0.178vw solid  rgb(255, 255, 255); /*Borde del botón*/
+  border: 0.2vw solid  rgb(255, 255, 255);  /*Borde del los botones de navgación*/
   font-size: 1vw;  /*Tamaño de letra*/
-  border-radius: 0.593vw;
+  border-radius: 0.6vw;
   padding: 0.296vw 0.593vw; /*Padding interno del botón*/
   cursor: pointer; /*Animación al pasar el cursor sobre el botón*/
   transition-duration: 0.4s;  /*Velocidad de transición al :hover*/
 }
 .buttonNav:hover{
   background-color: white; 
-  border: 0.118vw solid #005BEA;
-  box-shadow: 0 0.711vw 0.948vw 0 rgba(202, 255, 8, 0.24), 0 1vw 2.96vw 0 rgba(0,0,0,0.19);
+  border: 0.2vw solid #1100ff;
+  box-shadow: 0 0.711vw 0.948vw 0 rgba(202, 255, 8, 0.24), 0 1vw var(--radius) 0 rgba(0,0,0,0.19);
 }

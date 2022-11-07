@@ -1,8 +1,14 @@
+:root{
+  --widthMain: 75.9vw;   /* Ancho Principal */
+  --radius: 3vw;    /* curvatura del los boredes generales */
+  --borderMain: 0.3vw;    /* Ancho de bordes en titulos y botones "V" */
+  --borderSecundary: 0.25vw;    /* Ancho de bordes en secciones "V" */
+}
 .divMain{
   width: auto;
   height: auto;
   margin: auto;
-  background-image: url("http://wallpapercave.com/wp/9eqiCI6.jpg");
+  background-image: url("http://wallpapercave.com/wp/1bgDnHz.jpg");
   background-repeat: repeat; 
 }
 .divPreMain{
@@ -10,19 +16,19 @@
   height: auto;
   margin: auto;
   background-color: #050A30;
-  border: 0.237vw solid  #1100ff;
-  border-radius: 1.6vw;
+  border: 0.15vw solid  #1100ff;
+  border-radius: var(--radius);
 }
 .containerSecc{  
-  width: 75.9vw;
+  width: var(--widthMain);
   margin:0 auto 0 auto;
   display: flexbox;
   align-items:stretch;
 }
 .divSecc{
-  width: 75.9vw;
+  width: var(--widthMain);
   height: 10vw;
-  border-radius: 2.96vw;
+  border-radius: var(--radius);
   display: flex;    /* Botón y titulo  */
   align-items: center;    /* Botón y titulo  */
   justify-content: flex-end;   /* Botón y titulo  */
@@ -40,13 +46,62 @@
   padding: 0.89vw;
   text-align: center;  /*Ubicación del texto flecha*/
   background-color: #04F9F2;
-  border-radius: 2.96vw;
-  border: 0.237vw solid  #00ff0d; /*Borde del botón flecha*/  
+  border-radius: var(--radius);
+  border: var(--borderMain) solid  #00ff0d; /*Borde del botón flecha*/  
+  cursor: pointer;
 }
 .textDiv:hover{
   background-color: white; 
-  border: 0.118vw solid #005BEA;
-  box-shadow: 0 0.711vw 0.948vw 0 rgba(202, 255, 8, 0.24), 0 1vw 2.96vw 0 rgba(0,0,0,0.19);
+  border: var(--borderMain) solid #04F9F2;
+  box-shadow: 0 0.711vw 0.948vw 0 rgba(202, 255, 8, 0.24), 0 1vw var(--radius) 0 rgba(0,0,0,0.19);
+}
+.asideButton {
+  width: 4.15vw;    /*Distancia con relación al margen izquierdo*/
+  height: 4.15vw;
+  float:  right; 
+  top: 0;
+  display: contents;    /* Posición botón flecha */
+}
+.buttonMostrar{   
+  height: 3.56vw;
+  width: 3.56vw;
+  font-size: 3.91vw; 
+  color: #000C66;
+  font-weight: bold;
+  background-color: #00ff0d; 
+  border: var(--borderMain) solid  rgb(255, 255, 255); /*Borde del botón*/
+  font-size: 0.949vw;  /*Tamaño de letra*/
+  border-radius: 5vw;  
+  cursor: pointer; /*Animación al pasar el cursor sobre el botón*/
+}
+.buttonMostrar:hover{
+  background-color: white; 
+  border: var(--borderMain) solid #1100ff;
+  box-shadow: 0 0.711vw 0.948vw 0 rgba(202, 255, 8, 0.24), 0 1vw var(--radius) 0 rgba(0,0,0,0.19);
+}
+html{
+  scroll-behavior: smooth;    /*Disminuye la velocidad en la que se ejecuta el evento de ir a una sección específica de la página*/
+}
+section{
+  scroll-margin-top: 4.74vw;    /*Margen entre cada sección y el apartado de navegación*/
+}
+a{
+  text-decoration: none;    /*Quita el subrayado del hipervínculo*/
+  color: #000C66;
+  font-weight: bold;
+}
+a:hover{
+  color: black;  
+}
+footer {
+  border-radius: var(--radius);
+  background-color: #091464;
+  text-align: center;  /* Ubicación del texto*/
+  border: 0.1vw solid  #fff;
+  font-size: 0.5vw;
+  font-family: Times New Roman;
+  font-weight: bold;
+  color: #00ff0d;
 }
 .tabulacion{
   display:inline;
@@ -65,58 +120,48 @@
   align-items: center;
   justify-content: center;
 }
-.asideButton {
-  width: 4.15vw;    /*Distancia con relación al margen izquierdo*/
-  height: 4.15vw;
-  float:  right; 
-  top: 0;
-  display: contents;    /* Posición botón flecha */
+.divMostrarC{
+  display: center;
+  align-items: center;
+  justify-content: center;
 }
-
-.buttonMostrar{   
-  height: 3.56vw;
-  width: 3.56vw;
-  font-size: 3.91vw; 
-  color: #000C66;
-  font-weight: bold;
-  background-color: #00ff0d; 
-  border: 0.178vw solid  rgb(255, 255, 255); /*Borde del botón*/
-  font-size: 0.949vw;  /*Tamaño de letra*/
-  border-radius: 29.6vw;  
-  cursor: pointer; /*Animación al pasar el cursor sobre el botón*/
+.divMostrarD{
+  display: center;
+  align-items: center;
+  justify-content: center;
 }
-.buttonMostrar:hover{
-  background-color: white; 
-  border: 0.118vw solid #005BEA;
-  box-shadow: 0 0.711vw 0.948vw 0 rgba(202, 255, 8, 0.24), 0 1vw 2.96vw 0 rgba(0,0,0,0.19);
+.divMostrarE{
+  display: center;
+  align-items: center;
+  justify-content: center;
 }
-html{
-  scroll-behavior: smooth;    /*Disminuye la velocidad en la que se ejecuta el evento de ir a una sección específica de la página*/
+.divMostrarF{
+  display: center;
+  align-items: center;
+  justify-content: center;
 }
-section{
-  scroll-margin-top: 4.74vw;    /*Margen entre cada sección y el apartado de navegación*/
+.divMostrarG{
+  display: center;
+  align-items: center;
+  justify-content: center;
 }
-a{
-  text-decoration: none;    /*Quita el subrayado del hipervínculo*/
-  color: #000C66;
-  font-weight: bold;
+.divMostrarH{
+  display: center;
+  align-items: center;
+  justify-content: center;
 }
-a:hover{
-  color: black;  
+.divMostrarI{
+  display: center;
+  align-items: center;
+  justify-content: center;
 }
-.footerSec {
-  width: 79.5vw;
-  height: 4vh;
-  background-color: #FFD53D;
-  color: #0067B3;
-  border: 0.237vw solid #00ff0d;
-  border-radius: 1.2vw;
+.divMostrarJ{
+  display: center;
+  align-items: center;
+  justify-content: center;
 }
-.footerText{
-  width: 50vw; 
-  font-family: Times New Roman;
-  color: #0067B3;
-  font-size: 1.18vw;  /*Tamaño de la fuente de la letra*/
-  text-align: center;  /*Ubicación del texto*/ 
-  border: 10vw solid #f18305;
+.divMostrarK{
+  display: center;
+  align-items: center;
+  justify-content: center;
 }

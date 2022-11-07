@@ -4,12 +4,22 @@ import './App.css';
 import './styles/header.css';
 import './styles/nav.css';
 import './styles/seccOne.css';
-import './styles/seccThree.css';
+import './styles/seccTwo.css';
+// import './styles/seccThree.css';
 
 
 function App() {
   const [stateInfoA, setStateInfoA] = useState("divMostrar");
   const [stateInfoB, setStateInfoB] = useState("divMostrar");
+  const [stateInfoC, setStateInfoC] = useState("divMostrar");
+  const [stateInfoD, setStateInfoD] = useState("divMostrar");
+  const [stateInfoE, setStateInfoE] = useState("divMostrar");
+  const [stateInfoF, setStateInfoF] = useState("divMostrar");
+  const [stateInfoG, setStateInfoG] = useState("divMostrar");
+  const [stateInfoH, setStateInfoH] = useState("divMostrar");
+  const [stateInfoI, setStateInfoI] = useState("divMostrar");
+  const [stateInfoJ, setStateInfoJ] = useState("divMostrar");
+  const [stateInfoK, setStateInfoK] = useState("divMostrar");
   
   const onDisplayA = () => {
     if (stateInfoA==="divMostrar"){
@@ -29,6 +39,87 @@ function App() {
       console.log(stateInfoB);
     }
   } 
+  const onDisplayC = () =>{   
+    if (stateInfoC==="divMostrar"){
+      setStateInfoC("divMostrarC");
+      console.log(stateInfoC);
+    } else{
+      setStateInfoC("divMostrar");
+      console.log(stateInfoC);
+    }
+  } 
+  const onDisplayD = () =>{   
+    if (stateInfoD==="divMostrar"){
+      setStateInfoD("divMostrarD");
+      console.log(stateInfoD);
+    } else{
+      setStateInfoD("divMostrar");
+      console.log(stateInfoD);
+    }
+  } 
+  const onDisplayE = () =>{   
+    if (stateInfoE==="divMostrar"){
+      setStateInfoE("divMostrarE");
+      console.log(stateInfoE);
+    } else{
+      setStateInfoE("divMostrar");
+      console.log(stateInfoE);
+    }
+  } 
+  const onDisplayF = () =>{   
+    if (stateInfoF==="divMostrar"){
+      setStateInfoF("divMostrarF");
+      console.log(stateInfoF);
+    } else{
+      setStateInfoF("divMostrar");
+      console.log(stateInfoF);
+    }
+  } 
+  const onDisplayG = () =>{   
+    if (stateInfoG==="divMostrar"){
+      setStateInfoG("divMostrarG");
+      console.log(stateInfoG);
+    } else{
+      setStateInfoG("divMostrar");
+      console.log(stateInfoG);
+    }
+  } 
+  const onDisplayH = () =>{   
+    if (stateInfoH==="divMostrar"){
+      setStateInfoH("divMostrarH");
+      console.log(stateInfoH);
+    } else{
+      setStateInfoH("divMostrar");
+      console.log(stateInfoH);
+    }
+  } 
+  const onDisplayI = () =>{   
+    if (stateInfoI==="divMostrar"){
+      setStateInfoI("divMostrarI");
+      console.log(stateInfoI);
+    } else{
+      setStateInfoI("divMostrar");
+      console.log(stateInfoI);
+    }
+  } 
+  const onDisplayJ = () =>{   
+    if (stateInfoJ==="divMostrar"){
+      setStateInfoJ("divMostrarJ");
+      console.log(stateInfoJ);
+    } else{
+      setStateInfoJ("divMostrar");
+      console.log(stateInfoJ);
+    }
+  } 
+  const onDisplayK = () =>{   
+    if (stateInfoK==="divMostrar"){
+      setStateInfoK("divMostrarK");
+      console.log(stateInfoK);
+    } else{
+      setStateInfoK("divMostrar");
+      console.log(stateInfoK);
+    }
+  } 
 
   return (
     <Fragment>
@@ -43,16 +134,16 @@ function App() {
           <div className='divButtonNav'>
             {/** NAVEGACIÓN ---------------------------------------------------------------------------------------*/}
             <button className='buttonNav' onClick={onDisplayA}><a href="#inicio">Inicio</a></button>
-            <button className='buttonNav'><a href="#concepto">Concepto de la robótica</a></button>
-            <button className='buttonNav'onClick={onDisplayB}><a href="#historia">Historia</a></button>
-            <button className='buttonNav'><a href="#objetivos">Objetivos</a></button>
-            <button className='buttonNav'><a href="#elementos">Elementos</a></button>
-            <button className='buttonNav'><a href="#tipos">Tipos de movimientos</a></button>
-            <button className='buttonNav'><a href="#robot">Robot casero</a></button>
-            <button className='buttonNav'><a href="#programacion">Introducción a la programación</a></button>
-            <button className='buttonNav'><a href="#bloques-codigo">Bloques Vs Código</a></button>
-            <button className='buttonNav'><a href="#programacion-codigo">Programación por código</a></button>
-            <button className='buttonNav'><a href="#programacion-robot">Programación y robots</a></button>
+            <button className='buttonNav' onClick={onDisplayB}><a href="#historia">Historia</a></button>
+            <button className='buttonNav' onClick={onDisplayC}><a href="#concepto">Concepto de la robótica</a></button>
+            <button className='buttonNav' onClick={onDisplayD}><a href="#objetivos">Objetivos</a></button>
+            <button className='buttonNav' onClick={onDisplayE}><a href="#elementos">Elementos</a></button>
+            <button className='buttonNav' onClick={onDisplayF}><a href="#tipos">Tipos de movimientos</a></button>
+            <button className='buttonNav' onClick={onDisplayG}><a href="#robot">Robot casero</a></button>
+            <button className='buttonNav' onClick={onDisplayH}><a href="#programacion">Introducción a la programación</a></button>
+            <button className='buttonNav' onClick={onDisplayI}><a href="#bloques-codigo">Bloques Vs Código</a></button>
+            <button className='buttonNav' onClick={onDisplayJ}><a href="#programacion-codigo">Programación por código</a></button>
+            <button className='buttonNav' onClick={onDisplayK}><a href="#programacion-robot">Programación y robots</a></button>
             {/* <button className='buttonNav'>Fin</button> */}
           </div>
           <body>
@@ -86,7 +177,7 @@ function App() {
                 </div>
               </div> 
             </section>
-            {/** SECCIOÓN TRES: HISTOTIA ------------------------------------------------------------------------------*/}
+            {/** SECCIOÓN DOS: HISTOTRIA ------------------------------------------------------------------------------*/}
             <section className='containerSecc' id="historia">            
               <div className="divSecc">     {/** este div contiene el titulo y button "V" */}
                 <div className='positionTittle'>     {/** Titulo de la sección */}                  
@@ -124,11 +215,174 @@ function App() {
                 </div>
               </div>
             </section>        
+            {/** SECCIOÓN TRES:CONCEPTO GENERAL ------------------------------------------------------------------------------*/}
+            <section className='containerSecc' id="concepto">            
+              <div className="divSecc">     {/** este div contiene el titulo y button "V" */}
+                <div className='positionTittle'>     {/** Titulo de la sección */}                  
+                  <button className='textDiv' onClick={onDisplayC}><a href="#concepto">Conceptos generales de la robótica</a></button>
+                </div>
+                <div className="asideButton">     {/** button "V" */}
+                  <aside>
+                    <button className='buttonMostrar' onClick={onDisplayC}><a href="#concepto">V</a></button>
+                  </aside>
+                </div>
+              </div>  
+              <div className={stateInfoC}>      {/** Contenido de la sección */}
+                <div className='containerSecc'>
+                  <h1>Conceptos</h1>
+                </div>
+              </div>
+            </section>        
+            {/** SECCIOÓN CUATRO:OBJETIVOS GENERAL ------------------------------------------------------------------------------*/}
+            <section className='containerSecc' id="objetivos">            
+              <div className="divSecc">     {/** este div contiene el titulo y button "V" */}
+                <div className='positionTittle'>     {/** Titulo de la sección */}                  
+                  <button className='textDiv' onClick={onDisplayD}><a href="#concepto">Objetivos de la robótica</a></button>
+                </div>
+                <div className="asideButton">     {/** button "V" */}
+                  <aside>
+                    <button className='buttonMostrar' onClick={onDisplayD}><a href="#concepto">V</a></button>
+                  </aside>
+                </div>
+              </div>  
+              <div className={stateInfoD}>      {/** Contenido de la sección */}
+                <div className='containerSecc'>
+                  <h1>bjetivos</h1>
+                </div>
+              </div>
+            </section>        
+            {/** SECCIOÓN CINCO: ELEMENTOS ------------------------------------------------------------------------------*/}
+            <section className='containerSecc' id="elementos">            
+              <div className="divSecc">     {/** este div contiene el titulo y button "V" */}
+                <div className='positionTittle'>     {/** Titulo de la sección */}                  
+                  <button className='textDiv' onClick={onDisplayE}><a href="#elementos">¿Qué elementos conforman un robot?</a></button>
+                </div>
+                <div className="asideButton">     {/** button "V" */}
+                  <aside>
+                    <button className='buttonMostrar' onClick={onDisplayE}><a href="#elememtos">V</a></button>
+                  </aside>
+                </div>
+              </div>  
+              <div className={stateInfoE}>      {/** Contenido de la sección */}
+                <div className='containerSecc'>
+                  <h1>Elementos</h1>
+                </div>
+              </div>
+            </section>        
+            {/** SECCIOÓN SEIS:TIPOS DE MOVIMIENTOS ------------------------------------------------------------------------------*/}
+            <section className='containerSecc' id="tipos">            
+              <div className="divSecc">     {/** este div contiene el titulo y button "V" */}
+                <div className='positionTittle'>     {/** Titulo de la sección */}                  
+                  <button className='textDiv' onClick={onDisplayF}><a href="#tipos">Tipos de movimeintos en robots</a></button>
+                </div>
+                <div className="asideButton">     {/** button "V" */}
+                  <aside>
+                    <button className='buttonMostrar' onClick={onDisplayF}><a href="#tipos">V</a></button>
+                  </aside>
+                </div>
+              </div>  
+              <div className={stateInfoF}>      {/** Contenido de la sección */}
+                <div className='containerSecc'>
+                  <h1>Sonríe Imbécil</h1>
+                </div>
+              </div>
+            </section>        
+            {/** SECCIOÓN SIETE: ROBOT CASERO ------------------------------------------------------------------------------*/}
+            <section className='containerSecc' id="robot">            
+              <div className="divSecc">     {/** este div contiene el titulo y button "V" */}
+                <div className='positionTittle'>     {/** Titulo de la sección */}                  
+                  <button className='textDiv' onClick={onDisplayG}><a href="#robot">Mi primer robot casero</a></button>
+                </div>
+                <div className="asideButton">     {/** button "V" */}
+                  <aside>
+                    <button className='buttonMostrar' onClick={onDisplayG}><a href="#concepto">V</a></button>
+                  </aside>
+                </div>
+              </div>  
+              <div className={stateInfoG}>      {/** Contenido de la sección */}
+                <div className='containerSecc'>
+                  <h1>Sonríe Imbécil</h1>
+                </div>
+              </div>
+            </section>        
+            {/** SECCIOÓN OCHO: INTRODUCCIÓN A LA PROGRAMACIÓN ------------------------------------------------------------------------------*/}
+            <section className='containerSecc' id="programacion">            
+              <div className="divSecc">     {/** este div contiene el titulo y button "V" */}
+                <div className='positionTittle'>     {/** Titulo de la sección */}                  
+                  <button className='textDiv' onClick={onDisplayH}><a href="#programacion">Introducción a la programación</a></button>
+                </div>
+                <div className="asideButton">     {/** button "V" */}
+                  <aside>
+                    <button className='buttonMostrar' onClick={onDisplayH}><a href="#programacion">V</a></button>
+                  </aside>
+                </div>
+              </div>  
+              <div className={stateInfoH}>      {/** Contenido de la sección */}
+                <div className='containerSecc'>
+                  <h1>Sonríe Imbécil</h1>
+                </div>
+              </div>
+            </section>        
+            {/** SECCIOÓN NUEVE: BLOQUES Vs CÓDIGO ------------------------------------------------------------------------------*/}
+            <section className='containerSecc' id="bloques-codigo">            
+              <div className="divSecc">     {/** este div contiene el titulo y button "V" */}
+                <div className='positionTittle'>     {/** Titulo de la sección */}                  
+                  <button className='textDiv' onClick={onDisplayI}><a href="#bloques-codigo">Programación por bloques Vs Código</a></button>
+                </div>
+                <div className="asideButton">     {/** button "V" */}
+                  <aside>
+                    <button className='buttonMostrar' onClick={onDisplayI}><a href="#bloques-codigo">V</a></button>
+                  </aside>
+                </div>
+              </div>  
+              <div className={stateInfoI}>      {/** Contenido de la sección */}
+                <div className='containerSecc'>
+                  <h1>Sonríe Imbécil</h1>
+                </div>
+              </div>
+            </section>        
+            {/** SECCIOÓN DIEZ: cONCEPTOS DE PROGRAMACIÓN POR CÓDIGO ------------------------------------------------------------------------------*/}
+            <section className='containerSecc' id="programacion-codigo">            
+              <div className="divSecc">     {/** este div contiene el titulo y button "V" */}
+                <div className='positionTittle'>     {/** Titulo de la sección */}                  
+                  <button className='textDiv' onClick={onDisplayJ}><a href="#programacion-codigo">Programación básica por código</a></button>
+                </div>
+                <div className="asideButton">     {/** button "V" */}
+                  <aside>
+                    <button className='buttonMostrar' onClick={onDisplayJ}><a href="#programacion-codigo">V</a></button>
+                  </aside>
+                </div>
+              </div>  
+              <div className={stateInfoJ}>      {/** Contenido de la sección */}
+                <div className='containerSecc'>
+                  <h1>Sonríe Imbécil</h1>
+                </div>
+              </div>
+            </section>        
+            {/** SECCIOÓN ONCE: PROGRAMANDO MI PRIMER ROBOT ------------------------------------------------------------------------------*/}
+            <section className='containerSecc' id="programacion-robot">            
+              <div className="divSecc">     {/** este div contiene el titulo y button "V" */}
+                <div className='positionTittle'>     {/** Titulo de la sección */}                  
+                  <button className='textDiv' onClick={onDisplayK}><a href="#programacion-robot">Mi primer robot programado</a></button>
+                </div>
+                <div className="asideButton">     {/** button "V" */}
+                  <aside>
+                    <button className='buttonMostrar' onClick={onDisplayK}><a href="#programacion-robot">V</a></button>
+                  </aside>
+                </div>
+              </div>  
+              <div className={stateInfoK}>      {/** Contenido de la sección */}
+                <div className='containerSecc'>
+                  <h1>Sonríe Imbécil</h1>
+                </div>
+              </div>
+            </section>        
           </body>
           {/** FOOTER --------------------------------------------------------------------------------------------- */}
           <footer>
-            <div className="footerSec">
-              <h4 className="footerTex">Author: Yohan M. Rodríguez Garzón<br></br></h4>
+            <div>
+              <h1>Yohan Rodríguez Garzón</h1>
+              <h1>ymrodriguezg.5@gmail.com</h1>
             </div>
           </footer>
         </div>
