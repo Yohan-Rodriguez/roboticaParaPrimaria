@@ -283,7 +283,7 @@ function App() {
               </div>  
               <div className={stateInfoF}>      {/** Contenido de la sección */}
                 <div className='containerSecc'>
-                  <h1>Sonríe Imbécil</h1>
+                  <h1>Prueba contenido</h1>
                 </div>
               </div>
             </section>        
@@ -301,7 +301,7 @@ function App() {
               </div>  
               <div className={stateInfoG}>      {/** Contenido de la sección */}
                 <div className='containerSecc'>
-                  <h1>Sonríe Imbécil</h1>
+                  <h1>Prueba contenido</h1>
                 </div>
               </div>
             </section>        
@@ -319,7 +319,7 @@ function App() {
               </div>  
               <div className={stateInfoH}>      {/** Contenido de la sección */}
                 <div className='containerSecc'>
-                  <h1>Sonríe Imbécil</h1>
+                  <h1>Prueba contenido</h1>
                 </div>
               </div>
             </section>        
@@ -337,7 +337,7 @@ function App() {
               </div>  
               <div className={stateInfoI}>      {/** Contenido de la sección */}
                 <div className='containerSecc'>
-                  <h1>Sonríe Imbécil</h1>
+                  <h1>Prueba contenido</h1>
                 </div>
               </div>
             </section>        
@@ -355,7 +355,7 @@ function App() {
               </div>  
               <div className={stateInfoJ}>      {/** Contenido de la sección */}
                 <div className='containerSecc'>
-                  <h1>Sonríe Imbécil</h1>
+                  <h1>Prueba contenido</h1>
                 </div>
               </div>
             </section>        
@@ -373,7 +373,7 @@ function App() {
               </div>  
               <div className={stateInfoK}>      {/** Contenido de la sección */}
                 <div className='containerSecc'>
-                  <h1>Sonríe Imbécil</h1>
+                  <h1>Prueba contenido</h1>
                 </div>
               </div>
             </section>        
