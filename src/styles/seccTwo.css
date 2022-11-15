@@ -1,17 +1,17 @@
 .divSeccTwoAGen{
   width: var(--widthMain);  
   border-radius: var(--radius);
-  background-color: aqua;
-  border: var(--borderSecundary) solid #ffff00;
+  background-color: #fff;
+  border: var(--borderSecundary) solid #2df737;  
 }
 .widthDivTextB{
   width: 73.53vw;
 }
 .textSeccTwoA{
   margin: 1em;  
-  font-family: Times New Roman;
+  font-family: 'Poppins';
   color: #000000;
-  font-size: 1.18vw;  /*Tamaño de la fuente de la letra*/ 
+  font-size: 1.1vw;  /*Tamaño de la fuente de la letra*/ 
   text-align: justify; /*Ubicación del texto*/  
   text-justify: inter-word;
 }
@@ -20,6 +20,8 @@
   height: auto;
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 1vw;
 }
 .divSeccTwoA{
   padding: 0.889vw;

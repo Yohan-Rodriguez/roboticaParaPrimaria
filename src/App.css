@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 :root{
   --widthMain: 75.9vw;   /* Ancho Principal */
   --radius: 3vw;    /* curvatura del los boredes generales */
@@ -5,18 +6,19 @@
   --borderSecundary: 0.25vw;    /* Ancho de bordes en secciones "V" */
 }
 .divMain{
-  width: auto;
+  width: 98.7vw;
   height: auto;
   margin: auto;
-  background-image: url("http://wallpapercave.com/wp/1bgDnHz.jpg");
+  background-image: url("http://www.pixelstalk.net/wp-content/uploads/2016/08/Robot-Wallpaper-Free-Download.jpg");
   background-repeat: repeat; 
+  position: absolute;
 }
 .divPreMain{
   width: 80vw;
   height: auto;
   margin: auto;
-  background-color: #050A30;
-  border: 0.15vw solid  #1100ff;
+  background-color: rgb(22, 0, 102);
+  border: 0.15vw solid  #fff;
   border-radius: var(--radius);
 }
 .containerSecc{  
@@ -39,20 +41,20 @@
 }
 .textDiv{
   width: 38.5vw;  
-  font-family: Times New Roman;
+  font-family: 'Poppins';
   color:#000C66;
-  font-size: 2.07vw;  /*Tamaño de la fuente de la letra flecha*/
+  font-size: 1.8vw;  /*Tamaño de la fuente de la letra flecha*/
   font-weight: bold;
   padding: 0.89vw;
   text-align: center;  /*Ubicación del texto flecha*/
-  background-color: #04F9F2;
+  background-color: #00ff0d;
   border-radius: var(--radius);
-  border: var(--borderMain) solid  #00ff0d; /*Borde del botón flecha*/  
+  border: var(--borderMain) solid  #fff; /*Borde del botón flecha*/  
   cursor: pointer;
 }
 .textDiv:hover{
-  background-color: white; 
-  border: var(--borderMain) solid #04F9F2;
+  background-color: #fff; 
+  border: var(--borderMain) solid #00ff0d;
   box-shadow: 0 0.711vw 0.948vw 0 rgba(202, 255, 8, 0.24), 0 1vw var(--radius) 0 rgba(0,0,0,0.19);
 }
 .asideButton {
@@ -99,7 +101,7 @@ footer {
   text-align: center;  /* Ubicación del texto*/
   border: 0.1vw solid  #fff;
   font-size: 0.5vw;
-  font-family: Times New Roman;
+  font-family: 'Times New Roman';
   font-weight: bold;
   color: #00ff0d;
 }

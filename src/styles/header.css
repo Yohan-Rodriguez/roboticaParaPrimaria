@@ -8,16 +8,16 @@
   width: auto;
   height: 16.36vw;
   background-image: url("https://i.pinimg.com/originals/07/df/40/07df40e7af2ec99e95d3c6eb073526b5.jpg");
-  border: 0.2vw solid  rgb(255, 255, 255); /*Borde del botón*/
+  border: 0.2vw solid  #fff; /*Borde del botón*/
   background-position: left;   /*Posición de la imagen dentro del header*/
-  background-color: #b3b5cf;
   border-radius: var(--radius); /*Curvatura en las esquinas de la clase css*/
   background-repeat: repeat;  /*No repetir la imagen*/   
 }
 .textHeader{
   width: var(--widthMain);
   margin: auto;
-  font-family: Times New Roman;
+  font-family: 'Poppins';
+  -webkit-text-stroke: 0.04vw #fff;
   font-size: 3.85vw;  /*Tamaño de la fuente de la letra*/
   color: #ffff00;
   font-weight: bold;

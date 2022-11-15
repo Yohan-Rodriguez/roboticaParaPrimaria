@@ -1,24 +1,58 @@
-.divButtonNav{
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
   width: var(--widthMain);
   height: 2.96vw;
   margin: auto;
   display: flex;  /*Flex: Ubica todos los botones en una sola fila*/
   position: sticky; top:0; /*Mantinene el div anclado a la parte superior de la página mientras se hace scroll*/
 }
-.buttonNav{
-  background-color: #00ff0d;
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #ffff00;
   color: #000C66;
   font-weight: bold;
-  /*text-align: center;*/
-  border: 0.2vw solid  rgb(255, 255, 255);  /*Borde del los botones de navgación*/
-  font-size: 1vw;  /*Tamaño de letra*/
+  border: 0.2vw solid  #000;  /*Borde del los botones de navgación*/
+  font-size: 1.2vw;  /*Tamaño de letra*/
   border-radius: 0.6vw;
-  padding: 0.296vw 0.593vw; /*Padding interno del botón*/
   cursor: pointer; /*Animación al pasar el cursor sobre el botón*/
   transition-duration: 0.4s;  /*Velocidad de transición al :hover*/
 }
-.buttonNav:hover{
-  background-color: white; 
-  border: 0.2vw solid #1100ff;
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #00ff0d; 
+  border: 0.2vw solid #fff;
   box-shadow: 0 0.711vw 0.948vw 0 rgba(202, 255, 8, 0.24), 0 1vw var(--radius) 0 rgba(0,0,0,0.19);
 }
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #ff060600;
+  min-width: 11.9vw;
+  box-shadow: 0vw 0.6vw 1.18vw 0vw rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  width: auto;
+  height: auto;
+  margin: auto;
+  padding: 1vw;
+  color: black;
+  text-decoration: none;
+  display: flex;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #00ff0d;
+  box-shadow: 0 0.711vw 0.948vw 0 rgba(202, 255, 8, 0.24), 0 1vw var(--radius) 0 rgba(0,0,0,0.19);
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display: grid;}
