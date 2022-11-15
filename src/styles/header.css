@@ -11,13 +11,13 @@
   border: 0.2vw solid  #fff; /*Borde del botón*/
   background-position: left;   /*Posición de la imagen dentro del header*/
   border-radius: var(--radius); /*Curvatura en las esquinas de la clase css*/
-  background-repeat: repeat;  /*No repetir la imagen*/   
+  background-repeat: repeat;  /*Repetir la imagen*/   
 }
 .textHeader{
   width: var(--widthMain);
   margin: auto;
   font-family: 'Poppins';
-  -webkit-text-stroke: 0.04vw #fff;
+  -webkit-text-stroke: 0.04vw #fff;   /* Color y grosor del borde de la letra */
   font-size: 3.85vw;  /*Tamaño de la fuente de la letra*/
   color: #ffff00;
   font-weight: bold;

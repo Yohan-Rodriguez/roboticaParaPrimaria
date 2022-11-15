@@ -84,8 +84,8 @@
 html{
   scroll-behavior: smooth;    /*Disminuye la velocidad en la que se ejecuta el evento de ir a una sección específica de la página*/
 }
-section{
-  scroll-margin-top: 4.74vw;    /*Margen entre cada sección y el apartado de navegación*/
+section[id]{
+  scroll-margin-top: 0.05vh;    /*Margen entre cada sección y el apartado de navegación*/
 }
 a{
   text-decoration: none;    /*Quita el subrayado del hipervínculo*/
@@ -97,13 +97,13 @@ a:hover{
 }
 footer {
   border-radius: var(--radius);
-  background-color: #091464;
+  background-color: #ffff00;
   text-align: center;  /* Ubicación del texto*/
-  border: 0.1vw solid  #fff;
+  border: var(--borderMain) solid  #fff;
   font-size: 0.5vw;
   font-family: 'Times New Roman';
   font-weight: bold;
-  color: #00ff0d;
+  color: #000C66;
 }
 .tabulacion{
   display:inline;
@@ -127,7 +127,23 @@ footer {
   align-items: center;
   justify-content: center;
 }
+.divMostrarC1{
+  display: center;
+}
+.divMostrarC2{
+  display: center;
+  align-items: center;
+  justify-content: center;
+}
 .divMostrarD{
+  display: center;
+  align-items: center;
+  justify-content: center;
+}
+.divMostrarD1{
+  display: center;
+}
+.divMostrarD2{
   display: center;
   align-items: center;
   justify-content: center;

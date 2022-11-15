@@ -3,16 +3,23 @@ import { Fragment } from 'react';
 import './App.css';
 import './styles/header.css';
 import './styles/nav.css';
-import './styles/seccOne.css';
-import './styles/seccTwo.css';
+import './styles/secc1.css';
+import './styles/secc2.css';
+import './styles/secc3.css';
+import './styles/secc4.css';
 // import './styles/seccThree.css';
 
 
 function App() {
+  /** MOSTRAR DIV DE CADA SECCIÓN --------------------------------------------------*/
   const [stateInfoA, setStateInfoA] = useState("divMostrar");
   const [stateInfoB, setStateInfoB] = useState("divMostrar");
   const [stateInfoC, setStateInfoC] = useState("divMostrar");
+  const [stateInfoC1, setStateInfoC1] = useState("divMostrar");
+  const [stateInfoC2, setStateInfoC2] = useState("divMostrar");
   const [stateInfoD, setStateInfoD] = useState("divMostrar");
+  const [stateInfoD1, setStateInfoD1] = useState("divMostrar");
+  const [stateInfoD2, setStateInfoD2] = useState("divMostrar");
   const [stateInfoE, setStateInfoE] = useState("divMostrar");
   const [stateInfoF, setStateInfoF] = useState("divMostrar");
   const [stateInfoG, setStateInfoG] = useState("divMostrar");
@@ -48,6 +55,24 @@ function App() {
       console.log(stateInfoC);
     }
   } 
+  const onDisplayC1 = () =>{   
+    if (stateInfoC1==="divMostrar"){
+      setStateInfoC1("divMostrarC1");
+      console.log(stateInfoC1);
+    } else{
+      setStateInfoC1("divMostrar");
+      console.log(stateInfoC1);
+    }
+  } 
+  const onDisplayC2 = () =>{   
+    if (stateInfoC2==="divMostrar" && stateInfoC1==="divMostrarC1"){
+      setStateInfoC2("divMostrarC2");
+      console.log(stateInfoC2);
+    } else{
+      setStateInfoC2("divMostrar");
+      console.log(stateInfoC2);
+    }
+  } 
   const onDisplayD = () =>{   
     if (stateInfoD==="divMostrar"){
       setStateInfoD("divMostrarD");
@@ -55,6 +80,24 @@ function App() {
     } else{
       setStateInfoD("divMostrar");
       console.log(stateInfoD);
+    }
+  } 
+  const onDisplayD1 = () =>{   
+    if (stateInfoD1==="divMostrar"){
+      setStateInfoD1("divMostrarD1");
+      console.log(stateInfoD1);
+    } else{
+      setStateInfoD1("divMostrar");
+      console.log(stateInfoD1);
+    }
+  } 
+  const onDisplayD2 = () =>{   
+    if (stateInfoD2==="divMostrar" && stateInfoD1==="divMostrarD1"){
+      setStateInfoD2("divMostrarD2");
+      console.log(stateInfoD2);
+    } else{
+      setStateInfoD2("divMostrar");
+      console.log(stateInfoD2);
     }
   } 
   const onDisplayE = () =>{   
@@ -120,7 +163,8 @@ function App() {
       console.log(stateInfoK);
     }
   } 
-  /* When the user clicks on the button, 
+
+  /* FUNCIÓN DEL MENÚ DESPLEGABLE VERTIVALMENTE When the user clicks on the button, 
   toggle between hiding and showing the dropdown content */
   function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
@@ -139,7 +183,7 @@ function App() {
       }
     }
   }
-
+/**------------------------------------------------------------------------------------------------- */
   return (
     <Fragment>
       <div className='divMain'>
@@ -156,16 +200,15 @@ function App() {
                 {/** NAVEGACIÓN ---------------------------------------------------------------------------------------*/}
                 <button className='dropbtn' onClick={onDisplayA}><a href="#inicio">Inicio</a></button>
                 <button className='dropbtn' onClick={onDisplayB}><a href="#historia">Historia</a></button>
-                <button className='dropbtn' onClick={onDisplayC}><a href="#concepto">Concepto de la robótica</a></button>
-                <button className='dropbtn' onClick={onDisplayD}><a href="#objetivos">Objetivos</a></button>
-                <button className='dropbtn' onClick={onDisplayE}><a href="#elementos">Elementos</a></button>
+                <button className='dropbtn' onClick={onDisplayC}><a href="#concepto">Conceptos generales de la robótica</a></button>
+                <button className='dropbtn' onClick={onDisplayD}><a href="#objetivos">Objetivos de la robótica</a></button>
+                <button className='dropbtn' onClick={onDisplayE}><a href="#elementos">Elementos de la robótica</a></button>
                 <button className='dropbtn' onClick={onDisplayF}><a href="#tipos">Tipos de movimientos</a></button>
-                <button className='dropbtn' onClick={onDisplayG}><a href="#robot">Robot casero</a></button>
+                <button className='dropbtn' onClick={onDisplayG}><a href="#robot">Mi primer robot casero</a></button>
                 <button className='dropbtn' onClick={onDisplayH}><a href="#programacion">Introducción a la programación</a></button>
-                <button className='dropbtn' onClick={onDisplayI}><a href="#bloques-codigo">Bloques Vs Código</a></button>
+                <button className='dropbtn' onClick={onDisplayI}><a href="#bloques-codigo">Programación por bloques Vs Código</a></button>
                 <button className='dropbtn' onClick={onDisplayJ}><a href="#programacion-codigo">Programación por código</a></button>
-                <button className='dropbtn' onClick={onDisplayK}><a href="#programacion-robot">Programación y robots</a></button>
-
+                <button className='dropbtn' onClick={onDisplayK}><a href="#programacion-robot">Mi primer robot programado</a></button>
             </div>   
           </div>
           <body>
@@ -250,8 +293,29 @@ function App() {
                 </div>
               </div>  
               <div className={stateInfoC}>      {/** Contenido de la sección */}
-                <div className='containerSecc'>
-                  <h1>Conceptos</h1>
+                <div className='mostarButtonsD'>  
+                  <div className='divButtonD1'>
+                    <button className='d1' onClick={onDisplayC1}>1</button>
+                  </div>
+                  <aside className='divButtonD2'>
+                    <button className='d2' onClick={onDisplayC2}>2</button>
+                  </aside>
+                </div>
+                <div className={stateInfoC1}>      {/** Tutulo de la sección */}
+                  <div className='cuadroD'>
+                    <div className='cuadroD1'>
+                      <div className='divSecc4B'>
+                        <p className='textCuadrosSecc4'>La robótica es una disciplina que se ocupa del diseño, operación, manufacturación, estudio y aplicación de autómatas o robots. Para ello, combina la ingeniería mecánica, ingeniería eléctrica, ingeniería electrónica, ingeniería biomédica y las ciencias de la computación, así como otras disciplinas.</p>
+                      </div> 
+                    </div>
+                    <aside className={stateInfoC2}>
+                      <div className='cuadroD2'>
+                        <div className='divSecc4A'>
+                          <p className='textCuadrosSecc4'>La robótica representa la cumbre en la trayectoria de desarrollo tecnológico, es decir, del diseño de herramientas. Su cometido es construir una herramienta que pueda desempeñar muchas de las labores que actualmente desempeña el ser humano, de manera más eficiente y rápida, o en condiciones y ambientes que al ser humano le serían inaccesibles.</p>
+                        </div> 
+                      </div>
+                    </aside> 
+                  </div>
                 </div>
               </div>
             </section>        
@@ -259,19 +323,40 @@ function App() {
             <section className='containerSecc' id="objetivos">            
               <div className="divSecc">     {/** este div contiene el titulo y button "V" */}
                 <div className='positionTittle'>     {/** Titulo de la sección */}                  
-                  <button className='textDiv' onClick={onDisplayD}><a href="#concepto">Objetivos de la robótica</a></button>
+                  <button className='textDiv' onClick={onDisplayD}><a href="#objetivos">Objetivos de la robótica</a></button>
                 </div>
                 <div className="asideButton">     {/** button "V" */}
                   <aside>
-                    <button className='buttonMostrar' onClick={onDisplayD}><a href="#concepto">V</a></button>
+                    <button className='buttonMostrar' onClick={onDisplayD}><a href="#objetivos">V</a></button>
                   </aside>
                 </div>
               </div>  
-              <div className={stateInfoD}>      {/** Contenido de la sección */}
-                <div className='containerSecc'>
-                  <h1>bjetivos</h1>
+              <div className={stateInfoD}>      {/** Tutulo de la sección */}
+                <div className='mostarButtonsD'>  
+                  <div className='divButtonD1'>
+                    <button className='d1' onClick={onDisplayD1}>1</button>
+                  </div>
+                  <aside className='divButtonD2'>
+                    <button className='d2' onClick={onDisplayD2}>2</button>
+                  </aside>
                 </div>
-              </div>
+                <div className={stateInfoD1}>
+                  <div className='cuadroC'>
+                    <div className='cuadroC1'>
+                      <div className='divSecc3B'>
+                        <p className='textCuadrosSecc3'>Por definición un robot es una máquina automática programable capaz de realizar determinadas operaciones de manera autónoma y sustituir a los seres humanos en algunas tareas</p>
+                      </div> 
+                    </div>
+                    <aside className={stateInfoD2}>
+                      <div className='cuadroC2'>
+                        <div className='divSecc3A'>
+                          <p className='textCuadrosSecc3'>Como curiosidad, el término “robot” se popularizó por la obra R.U.R (Robots Universales Rossum) de Karel Čapek en 1920. En la traducción al inglés de la obra teatral, la palabra checa “robota”, que significa trabajos forzados o trabajador, fue traducida al inglés como robot.</p>
+                        </div> 
+                      </div>
+                    </aside> 
+                  </div>
+                </div>
+                </div>
             </section>        
             {/** SECCIOÓN CINCO: ELEMENTOS ------------------------------------------------------------------------------*/}
             <section className='containerSecc' id="elementos">            
@@ -400,7 +485,7 @@ function App() {
               </div>
             </section>        
           </body>
-          {/** FOOTER --------------------------------------------------------------------------------------------- */}
+          {/** FOOTER ------------------------------------------------------------------------------------------------------------------ */}
           <footer>
             <div>
               <h1>Yohan Rodríguez Garzón</h1>

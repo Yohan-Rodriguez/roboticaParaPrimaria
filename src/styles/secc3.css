@@ -1,0 +1,80 @@
+.divSecc3A{     /* DIV del cuadro2 */
+    width: 32.61vw;
+    border-radius: var(--radius);
+    background-color: #fff;
+    border: var(--borderSecundary) solid #2df737;  
+}
+.textCuadrosSecc3{
+    width: 30.24vw;
+    margin: 1em;  
+    font-family: 'Poppins';
+    color: #000000;
+    font-size: 1.1vw;  /*Tamaño de la fuente de la letra*/
+    text-align: justify;  /*Justificar texto del parrafo*/  
+}
+.divSecc3B{         /* DIV del cuadro2 (flotante) */
+    width: 32.61vw;
+    border-radius: var(--radius);
+    background-color: #fff;
+    border: var(--borderSecundary) solid #2df737;  
+    float: right;
+    top: 0;
+}
+.mostarButtonsC{       /* DIV de los dos botones (1) y (2) */
+    width: 75vw;
+    height: 10vh;
+    display: inline-flex;
+}
+.divButtonC1{       /* DIV del boton (1) */
+    width: 50vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.c1{
+    font-size: 3.91vw; 
+    color: #000C66;
+    font-weight: bold;
+    background-color: #fff;
+    border-radius: var(--radius);
+    border: var(--borderSecundary) solid #ffff00;
+    cursor: pointer;
+}
+.divButtonC2{       /* DIV del boton (2) */
+    width: 50vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.c2{
+    font-size: 3.91vw; 
+    color: #000C66;
+    font-weight: bold;
+    background-color: #fff;
+    border-radius: var(--radius);
+    border: var(--borderSecundary) solid #ffff00;
+    cursor: pointer;
+    float: right;
+}
+.cuadroC{       /* DIV de los dos cuadros de texto */
+    width: 74.2vw;
+    display: inline-flex;
+}
+.cuadroC1{
+    width: 36.6vw;
+    height: auto;
+    margin: 1.5vw;      /* Margen entre el boton (1) y el cuadro1 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cuadroC2{
+    width: 36.6vw;
+    height: auto;
+    margin: 1.5vw;      /* Margen entre el boton (2) y el cuadro2 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
