@@ -6,7 +6,7 @@
   --borderSecundary: 0.25vw;    /* Ancho de bordes en secciones "V" */
 }
 .divMain{
-  width: 98.7vw;
+  width: 100vw;
   height: auto;
   margin: auto;
   background-image: url("http://www.pixelstalk.net/wp-content/uploads/2016/08/Robot-Wallpaper-Free-Download.jpg");
@@ -95,6 +95,20 @@ a{
 a:hover{
   color: black;  
 }
+.videoOne{
+  width: 35vw;
+  height: auto;
+  margin: 2vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  border: var(--borderSecundary) solid #2df737;    
+  border-radius: var(--radius);  
+  background-color: rgba(255, 255, 255, 0.212);
+}
 footer {
   border-radius: var(--radius);
   background-color: #ffff00;
@@ -131,6 +145,16 @@ footer {
   display: center;
 }
 .divMostrarC2{
+  display: center;
+  align-items: center;
+  justify-content: center;
+}
+.divMostrarC3{
+  display: center;
+  align-items: center;
+  justify-content: center;
+}
+.divMostrarC4{
   display: center;
   align-items: center;
   justify-content: center;

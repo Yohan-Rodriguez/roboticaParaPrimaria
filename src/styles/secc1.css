@@ -1,5 +1,5 @@
 .divSeccOneA{
-  width: 35.58vw;  
+  width: 35.6vw;  
   border-radius: var(--radius);
   background-color: #fff;
   border: var(--borderSecundary) solid #2df737;  
@@ -19,7 +19,7 @@
   text-align: justify;  /*Justificar texto del parrafo*/  
 }
 .divSeccOneB{
-  width: 32.61vw;
+  width: 35.6vw;
   border-radius: var(--radius);
   background-color: #fff;
   border: var(--borderSecundary) solid #2df737;  
@@ -33,11 +33,4 @@
   color: #000000;
   font-size: 1.1vw;  /*Tamaño de la fuente de la letra*/
   text-align: justify;  /*Justificar texto del parrafo*/  
-}
-.videoOne{
-  width: 75vw;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

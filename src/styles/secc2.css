@@ -15,14 +15,6 @@
   text-align: justify; /*Ubicación del texto*/  
   text-justify: inter-word;
 }
-.videoTwoA{ 
-  width: 73.65vw;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1vw;
-}
 .divSeccTwoA{
   padding: 0.889vw;
   margin: 1em;

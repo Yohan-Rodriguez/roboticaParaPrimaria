@@ -78,3 +78,81 @@
     align-items: center;
     justify-content: center;
 }
+/* The container */
+.container {
+    width: auto;
+    display: block;
+    position: relative;
+    padding-left: 2.6vw;
+    margin-bottom: 0.9vw;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.85vw;
+    width: 1.85vw;
+    background-color: #637564;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: rgb(22, 0, 102); 
+}
+
+/* When the radio button is checked, add a green background */
+.container input:checked ~ .checkmark {
+    background-color: #2df737;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+    top: 0.66vw;
+    left: 0.66vw;
+    width: 0.6vw;
+    height: 0.6vw;
+    border-radius: 50%;
+    background: white;
+}
+
+.divbuttonAnswer{
+    margin-right: 1.5vw;
+}
+.buttonAnswer{
+    background-color: #ffff00;
+    color: #000C66;
+    font-weight: bold;
+    border: 0.2vw solid  #000;  /*Borde del los botones de navgación*/
+    font-size: 1.1vw;  /*Tamaño de letra*/
+    font-family: 'Poppins';
+    border-radius: 0.6vw;
+    cursor: pointer;
+    float: right;
+}

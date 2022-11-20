@@ -15,8 +15,10 @@ function App() {
   const [stateInfoA, setStateInfoA] = useState("divMostrar");
   const [stateInfoB, setStateInfoB] = useState("divMostrar");
   const [stateInfoC, setStateInfoC] = useState("divMostrar");
-  const [stateInfoC1, setStateInfoC1] = useState("divMostrar");
-  const [stateInfoC2, setStateInfoC2] = useState("divMostrar");
+  const [stateInfoC1, setStateInfoC1] = useState("divMostrar");   /** Div marco izquierdo */
+  const [stateInfoC2, setStateInfoC2] = useState("divMostrar");   /** Div marco derecho general*/
+  const [stateInfoC3, setStateInfoC3] = useState("divMostrar");   /** Div marco derecho Pregunta*/
+  const [stateInfoC4, setStateInfoC4] = useState("divMostrar");   /** Div marco derecho Respuesta correcta*/
   const [stateInfoD, setStateInfoD] = useState("divMostrar");
   const [stateInfoD1, setStateInfoD1] = useState("divMostrar");
   const [stateInfoD2, setStateInfoD2] = useState("divMostrar");
@@ -27,59 +29,123 @@ function App() {
   const [stateInfoI, setStateInfoI] = useState("divMostrar");
   const [stateInfoJ, setStateInfoJ] = useState("divMostrar");
   const [stateInfoK, setStateInfoK] = useState("divMostrar");
+  // const [stateGeneral, setStateGeneral] = useState("divMostrar");
   
-  const onDisplayA = () => {
-    if (stateInfoA==="divMostrar"){
-      setStateInfoA("divMostrarA");
-      console.log(stateInfoA);
-    } else{
-      setStateInfoA("divMostrar");
-      console.log(stateInfoA);
-    }
-  }
-  const onDisplayB = () =>{   
-    if (stateInfoB==="divMostrar"){
-      setStateInfoB("divMostrarB");
-      console.log(stateInfoB);
-    } else{
-      setStateInfoB("divMostrar");
-      console.log(stateInfoB);
-    }
-  } 
-  const onDisplayC = () =>{   
-    if (stateInfoC==="divMostrar"){
-      setStateInfoC("divMostrarC");
-      console.log(stateInfoC);
-    } else{
-      setStateInfoC("divMostrar");
-      console.log(stateInfoC);
+  const onDisplay = function () {
+    var test =document.querySelectorAll('button[name=menu]');
+    for(var i=0; i<test.length; i++) {
+      test[i].addEventListener("click", function() {
+        const stateGeneral = this.id;  
+        console.log("El id del botón es "+ stateGeneral);
+
+        if (stateGeneral === "displayA") {
+          if (stateInfoA==="divMostrar") {
+            setStateInfoA("divMostrarA");
+            console.log(stateInfoA);
+          } else {
+            setStateInfoA("divMostrar");
+            console.log(stateInfoA);
+          }
+        } else if (stateGeneral === "displayB"){
+          if (stateInfoB==="divMostrar"){
+            setStateInfoB("divMostrarB");
+            console.log(stateInfoB);
+          } else{
+            setStateInfoB("divMostrar");
+            console.log(stateInfoB);
+          }
+        } else if (stateGeneral === "displayC") {
+          if (stateInfoC==="divMostrar"){
+            setStateInfoC("divMostrarC");
+          } else{
+            setStateInfoC("divMostrar");
+          }
+        } else if (stateGeneral === "displayD") {
+          if (stateInfoD==="divMostrar"){
+            setStateInfoD("divMostrarD");
+            console.log(stateInfoD);
+          } else{
+            setStateInfoD("divMostrar");
+            console.log(stateInfoD);
+          }
+        } else if (stateGeneral === "displayE") {
+          if (stateInfoE==="divMostrar"){
+            setStateInfoE("divMostrarE");
+            console.log(stateInfoE);
+          } else{
+            setStateInfoE("divMostrar");
+            console.log(stateInfoE);
+          }
+        } else if (stateGeneral === "displayF") {
+          if (stateInfoF==="divMostrar"){
+            setStateInfoF("divMostrarF");
+            console.log(stateInfoF);
+          } else{
+            setStateInfoF("divMostrar");
+            console.log(stateInfoF);
+          }
+        } else if (stateGeneral === "displayG") {
+          if (stateInfoG==="divMostrar"){
+            setStateInfoG("divMostrarG");
+            console.log(stateInfoG);
+          } else{
+            setStateInfoG("divMostrar");
+            console.log(stateInfoG);
+          }
+        } else if (stateGeneral === "displayH") {
+          if (stateInfoH==="divMostrar"){
+            setStateInfoH("divMostrarH");
+            console.log(stateInfoH);
+          } else{
+            setStateInfoH("divMostrar");
+            console.log(stateInfoH);
+          }
+        } else if (stateGeneral === "displayI") {
+          if (stateInfoI==="divMostrar"){
+            setStateInfoI("divMostrarI");
+            console.log(stateInfoI);
+          } else{
+            setStateInfoI("divMostrar");
+            console.log(stateInfoI);
+          }
+        } else if (stateGeneral === "displayJ") {
+          if (stateInfoJ==="divMostrar"){
+            setStateInfoJ("divMostrarJ");
+            console.log(stateInfoJ);
+          } else{
+            setStateInfoJ("divMostrar");
+            console.log(stateInfoJ);
+          }
+        } else if (stateGeneral === "displayK") {
+          if (stateInfoK==="divMostrar"){
+            setStateInfoK("divMostrarK");
+            console.log(stateInfoK);
+          } else{
+            setStateInfoK("divMostrar");
+            console.log(stateInfoK);
+          }
+        }
+      }); 
     }
   } 
   const onDisplayC1 = () =>{   
     if (stateInfoC1==="divMostrar"){
       setStateInfoC1("divMostrarC1");
-      console.log(stateInfoC1);
     } else{
       setStateInfoC1("divMostrar");
-      console.log(stateInfoC1);
     }
   } 
   const onDisplayC2 = () =>{   
-    if (stateInfoC2==="divMostrar" && stateInfoC1==="divMostrarC1"){
-      setStateInfoC2("divMostrarC2");
-      console.log(stateInfoC2);
-    } else{
-      setStateInfoC2("divMostrar");
-      console.log(stateInfoC2);
-    }
-  } 
-  const onDisplayD = () =>{   
-    if (stateInfoD==="divMostrar"){
-      setStateInfoD("divMostrarD");
-      console.log(stateInfoD);
-    } else{
-      setStateInfoD("divMostrar");
-      console.log(stateInfoD);
+    if (stateInfoC1==="divMostrarC1" && stateInfoC2==="divMostrar"){    /** Verifica si marco izquierdo se muestra en pantalla  */
+      setStateInfoC2("divMostrarC2");     /** Habilita marco derecho general */
+      setStateInfoC3("divMostrarC3");     /** Habilita marco derecho pregunta */
+      setStateInfoC4("divMostrar");
+      console.log("Sonríe");
+    }else{
+      setStateInfoC2("divMostrar");     
+      setStateInfoC3("divMostrar");
+      setStateInfoC4("divMostrar");
+      console.log("Imbécil.")
     }
   } 
   const onDisplayD1 = () =>{   
@@ -100,69 +166,16 @@ function App() {
       console.log(stateInfoD2);
     }
   } 
-  const onDisplayE = () =>{   
-    if (stateInfoE==="divMostrar"){
-      setStateInfoE("divMostrarE");
-      console.log(stateInfoE);
-    } else{
-      setStateInfoE("divMostrar");
-      console.log(stateInfoE);
+  const answerQue = () =>{
+    if (document.querySelector('input[name=secc3]:checked').value === "2"){     /** Verifica validez de la respuesta */
+      setStateInfoC3("divMostrar")      /** Oculta marco derecho pregunta */
+      setStateInfoC4("divMostrarC4")    /** Habilita marco derecho respuesta correcta */
+      console.log("1");
     }
-  } 
-  const onDisplayF = () =>{   
-    if (stateInfoF==="divMostrar"){
-      setStateInfoF("divMostrarF");
-      console.log(stateInfoF);
-    } else{
-      setStateInfoF("divMostrar");
-      console.log(stateInfoF);
+    else{
+      alert("Respuesta Incorrecta. Try again!");
     }
-  } 
-  const onDisplayG = () =>{   
-    if (stateInfoG==="divMostrar"){
-      setStateInfoG("divMostrarG");
-      console.log(stateInfoG);
-    } else{
-      setStateInfoG("divMostrar");
-      console.log(stateInfoG);
-    }
-  } 
-  const onDisplayH = () =>{   
-    if (stateInfoH==="divMostrar"){
-      setStateInfoH("divMostrarH");
-      console.log(stateInfoH);
-    } else{
-      setStateInfoH("divMostrar");
-      console.log(stateInfoH);
-    }
-  } 
-  const onDisplayI = () =>{   
-    if (stateInfoI==="divMostrar"){
-      setStateInfoI("divMostrarI");
-      console.log(stateInfoI);
-    } else{
-      setStateInfoI("divMostrar");
-      console.log(stateInfoI);
-    }
-  } 
-  const onDisplayJ = () =>{   
-    if (stateInfoJ==="divMostrar"){
-      setStateInfoJ("divMostrarJ");
-      console.log(stateInfoJ);
-    } else{
-      setStateInfoJ("divMostrar");
-      console.log(stateInfoJ);
-    }
-  } 
-  const onDisplayK = () =>{   
-    if (stateInfoK==="divMostrar"){
-      setStateInfoK("divMostrarK");
-      console.log(stateInfoK);
-    } else{
-      setStateInfoK("divMostrar");
-      console.log(stateInfoK);
-    }
-  } 
+  }
 
   /* FUNCIÓN DEL MENÚ DESPLEGABLE VERTIVALMENTE When the user clicks on the button, 
   toggle between hiding and showing the dropdown content */
@@ -198,17 +211,17 @@ function App() {
             <button className="dropbtn" onClick={myFunction}>Menú</button>
             <div id="myDropdown" className="dropdown-content">
                 {/** NAVEGACIÓN ---------------------------------------------------------------------------------------*/}
-                <button className='dropbtn' onClick={onDisplayA}><a href="#inicio">Inicio</a></button>
-                <button className='dropbtn' onClick={onDisplayB}><a href="#historia">Historia</a></button>
-                <button className='dropbtn' onClick={onDisplayC}><a href="#concepto">Conceptos generales de la robótica</a></button>
-                <button className='dropbtn' onClick={onDisplayD}><a href="#objetivos">Objetivos de la robótica</a></button>
-                <button className='dropbtn' onClick={onDisplayE}><a href="#elementos">Elementos de la robótica</a></button>
-                <button className='dropbtn' onClick={onDisplayF}><a href="#tipos">Tipos de movimientos</a></button>
-                <button className='dropbtn' onClick={onDisplayG}><a href="#robot">Mi primer robot casero</a></button>
-                <button className='dropbtn' onClick={onDisplayH}><a href="#programacion">Introducción a la programación</a></button>
-                <button className='dropbtn' onClick={onDisplayI}><a href="#bloques-codigo">Programación por bloques Vs Código</a></button>
-                <button className='dropbtn' onClick={onDisplayJ}><a href="#programacion-codigo">Programación por código</a></button>
-                <button className='dropbtn' onClick={onDisplayK}><a href="#programacion-robot">Mi primer robot programado</a></button>
+                <button className='dropbtn' onClick={onDisplay} id="displayA" name="menu"><a href="#inicio">Inicio</a></button>
+                <button className='dropbtn' onClick={onDisplay} id="displayB" name="menu"><a href="#historia">Historia</a></button>
+                <button className='dropbtn' onClick={onDisplay} id="displayC" name="menu"><a href="#concepto">Conceptos generales de la robótica</a></button>
+                <button className='dropbtn' onClick={onDisplay} id="displayD" name="menu"><a href="#objetivos">Objetivos de la robótica</a></button>
+                <button className='dropbtn' onClick={onDisplay} id="displayE" name="menu"><a href="#elementos">Elementos de la robótica</a></button>
+                <button className='dropbtn' onClick={onDisplay} id="displayF" name="menu"><a href="#tipos">Tipos de movimientos</a></button>
+                <button className='dropbtn' onClick={onDisplay} id="displayG" name="menu"><a href="#robot">Mi primer robot casero</a></button>
+                <button className='dropbtn' onClick={onDisplay} id="displayH" name="menu"><a href="#programacion">Introducción a la programación</a></button>
+                <button className='dropbtn' onClick={onDisplay} id="displayI" name="menu"><a href="#bloques-codigo">Programación por bloques Vs Código</a></button>
+                <button className='dropbtn' onClick={onDisplay} id="displayJ" name="menu"><a href="#programacion-codigo">Programación por código</a></button>
+                <button className='dropbtn' onClick={onDisplay} id="displayK" name="menu"><a href="#programacion-robot">Mi primer robot programado</a></button>
             </div>   
           </div>
           <body>
@@ -216,11 +229,11 @@ function App() {
             <section className='containerSecc' id="inicio">            
               <div className="divSecc">   {/** Este div contiene el titulo y button "V" */}
                 <div className='positionTittle'>      {/** Tutulo de la sección */}
-                  <button className='textDiv' onClick={onDisplayA}><a href="#inicio">Inicio</a></button>
+                  <button className='textDiv' onClick={onDisplay} id="displayA" name="menu"><a href="#inicio">Inicio</a></button>
                 </div>
                 <div className="asideButton"> {/** button "V" */}
                   <aside>
-                    <button className='buttonMostrar' onClick={onDisplayA}><a href="#inicio">V</a></button>
+                    <button className='buttonMostrar' onClick={onDisplay} id="displayA" name="menu"><a href="#inicio">V</a></button>
                   </aside>
                 </div>
               </div>  
@@ -234,23 +247,19 @@ function App() {
                 <div className='divSeccOneA'>
                   <h1 className='tittleSeccOneA'>Presentación del sofware</h1>  
                   <p className='textSeccOneA'>Robótica para estudiantes de primaria es un proyecto enfocado a la inmersión y fortalecimiento en conocimientos tecnológicos en edades tempranas de estudiantes de instituciones de educación públicas y/o privadas, especificamente en el ambito de la robótica, tocando temas que abordan la fundamentación y saberes básicos de está área, la historia, progreso y aportes a través del tiempo de la robótica a la sociedad; un vistazo amigable al paradigma de la programación, conceptos básicos e intemedios de está; elementos y movimientos aplicables en robots, de fácil entendimiento y abstracción que pueden ser estudiados para diseñar y obtener prototipos que cumplan una función específica.</p>
-                </div>
-                <div className="videoOne" >
-                  <video src="https://media.geeksforgeeks.org/wp-content/uploads/20210314115545/sample-video.mp4" width="640" height="480" controls>
-                  Your browser does not support the video tag.
-                  </video>
-                </div>
+                </div>     
+                <iframe className="videoOne" src="https://www.youtube.com/embed/WlQNLSKwM5Q" title="¿Qué es la Robotica? Para que sirve y cuales son sus disciplinas?!?" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>                     
               </div> 
             </section>
             {/** SECCIOÓN DOS: HISTOTRIA ------------------------------------------------------------------------------*/}
             <section className='containerSecc' id="historia">            
               <div className="divSecc">     {/** este div contiene el titulo y button "V" */}
                 <div className='positionTittle'>     {/** Titulo de la sección */}                  
-                  <button className='textDiv' onClick={onDisplayB}><a href="#historia">Historia de la robótica</a></button>
+                  <button className='textDiv' onClick={onDisplay} id="displayB" name="menu"><a href="#historia">Historia de la robótica</a></button>
                 </div>
                 <div className="asideButton">     {/** button "V" */}
                   <aside>
-                    <button className='buttonMostrar' onClick={onDisplayB}><a href="#historia">V</a></button>
+                    <button className='buttonMostrar' onClick={onDisplay} id="displayB" name="menu"><a href="#historia">V</a></button>
                   </aside>
                 </div>
               </div>  
@@ -272,47 +281,71 @@ function App() {
                       <p className='widthDivTextB textSeccTwoA'>Por siglos, el ser humano ha construido máquinas que imitan partes del cuerpo humano. Los antiguos egipcios unieron brazos mecánicos a las estatuas de sus dioses; los griegos construyeron estatuas que operaban con sistemas hidráulicos, los cuales eran utilizados para fascinar a los adoradores de los templos.<br></br><br></br>El inicio de la robótica actual puede fijarse en la industria textil del siglo XVIII, cuando Joseph Jacquard inventa en 1801 una máquina textil programable mediante tarjetas perforadas. Luego, la Revolución Industrial impulsó el desarrollo de estos agentes mecánicos. Además de esto, durante los siglos XVII y XVIII en Europa fueron construidos muñecos mecánicos muy ingeniosos que tenían algunas características de robots. Jacques de Vauncansos construyó varios músicos de tamaño humano a mediados del siglo XVIII.En 1805, Henri Maillardert construyó una muñeca mecánica que era capaz de hacer dibujos.<br></br><br></br>La palabra robot se utilizó por primera vez en 1920 en una obra llamada "Los Robots Universales de Rossum", escrita por el dramaturgo checo Karel Capek. Su trama trataba sobre un hombre que fabricó un robot y luego este último mata al hombre. La palabra checa 'Robota' significa servidumbre o trabajado forzado, y cuando se tradujo al ingles se convirtió en el término robot.<br></br><br></br>Son varios los factores que intervienen para que se desarrollaran los primeros robots en la década de los 50's. La investigación en inteligencia artificial desarrolló maneras de emular el procesamiento de información humana con computadoras electrónicas e inventó una variedad de mecanismos para probar sus teorías.<br></br><br></br><span className='tabulacion'>    * </span>Las primeras patentes aparecieron en 1946 con los muy primitivos robots para traslado de maquinaria de Devol.<br></br><br></br><span className='tabulacion'>    * </span>En 1954, Devol diseña el primer robot programable.<br></br><br></br><span className='tabulacion'>    * </span>En 1960 se introdujo el primer robot "Unimate'', basada en la transferencia de artículos.<br></br><br></br><span className='tabulacion'>    * </span>En 1961 Un robot Unimate se instaló en la Ford Motors Company para atender una máquina de fundición de troquel.<br></br><br></br><span className='tabulacion'>    * </span>En 1966 Trallfa, una firma noruega, construyó e instaló un robot de pintura por pulverización.<br></br><br></br><span className='tabulacion'>    * </span>En 1971 El "Standford Arm'', un pequeño brazo de robot de accionamiento eléctrico, se desarrolló en la Standford University.<br></br><br></br><span className='tabulacion'>    * </span>En 1978 Se introdujo el robot PUMA para tareas de montaje por Unimation, basándose en diseños obtenidos en un estudio de la General Motors.<br></br><br></br>En los setenta, la NASA inicio un programa de cooperación con el Jet Propulsión Laboratory para desarrollar plataformas capaces de explorar terrenos hostiles.<br></br><br></br>En la actualidad, la robótica se debate entre modelos sumamente ambiciosos, como es el caso del IT, diseñado para expresar emociones, el COG, tambien conocido como el robot de cuatro sentidos, el famoso SOUJOURNER o el LUNAR ROVER, vehículo de turismo con control remotos, y otros mucho mas específicos como el CYPHER, un helicóptero robot de uso militar, el guardia de trafico japonés ANZEN TARO o los robots mascotas de Sony.</p>        
                     </div>
                   </div>
-                </div>
-                <div className="videoTwoA">
-                  <video src="https://media.geeksforgeeks.org/wp-content/uploads/20210314115545/sample-video.mp4" alt="Historia de la robótica" width="640" height="480" controls>
-                  Your browser does not support the video tag.
-                  </video>
-                </div>
+                </div>                                
+                <iframe className="videoOne" src="https://www.youtube.com/embed/4Q3vfQKaCQI" title="HISTORIA DE LA ROBÓTICA 🤖 | Los datos más ASOMBROSOS" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>                     
               </div>
             </section>        
-            {/** SECCIOÓN TRES:CONCEPTO GENERAL ------------------------------------------------------------------------------*/}
+            {/** SECCIOÓN TRES:CONCEPTO SGENERALES ------------------------------------------------------------------------------*/}
             <section className='containerSecc' id="concepto">            
               <div className="divSecc">     {/** este div contiene el titulo y button "V" */}
                 <div className='positionTittle'>     {/** Titulo de la sección */}                  
-                  <button className='textDiv' onClick={onDisplayC}><a href="#concepto">Conceptos generales de la robótica</a></button>
+                  <button className='textDiv' onClick={onDisplay} id="displayC" name="menu"><a href="#concepto">Conceptos generales de la robótica</a></button>
                 </div>
                 <div className="asideButton">     {/** button "V" */}
                   <aside>
-                    <button className='buttonMostrar' onClick={onDisplayC}><a href="#concepto">V</a></button>
+                    <button className='buttonMostrar' onClick={onDisplay} id="displayC" name="menu"><a href="#concepto">V</a></button>
                   </aside>
                 </div>
               </div>  
               <div className={stateInfoC}>      {/** Contenido de la sección */}
                 <div className='mostarButtonsD'>  
                   <div className='divButtonD1'>
-                    <button className='d1' onClick={onDisplayC1}>1</button>
+                    <button className='c1' onClick={onDisplayC1}>1</button>
                   </div>
                   <aside className='divButtonD2'>
-                    <button className='d2' onClick={onDisplayC2}>2</button>
+                    <button className='c2' onClick={onDisplayC2}>2</button>
                   </aside>
                 </div>
                 <div className={stateInfoC1}>      {/** Tutulo de la sección */}
-                  <div className='cuadroD'>
-                    <div className='cuadroD1'>
-                      <div className='divSecc4B'>
-                        <p className='textCuadrosSecc4'>La robótica es una disciplina que se ocupa del diseño, operación, manufacturación, estudio y aplicación de autómatas o robots. Para ello, combina la ingeniería mecánica, ingeniería eléctrica, ingeniería electrónica, ingeniería biomédica y las ciencias de la computación, así como otras disciplinas.</p>
+                  <div className='cuadroC'>
+                    <div className='cuadroC1'>
+                      <div className='divSecc3B'>
+                        <p className='textCuadrosSecc3'>La robótica es una disciplina que se ocupa del diseño, operación, manufacturación, estudio y aplicación de autómatas o robots. Para ello, combina la ingeniería mecánica, ingeniería eléctrica, ingeniería electrónica, ingeniería biomédica y las ciencias de la computación, así como otras disciplinas.</p>
                       </div> 
                     </div>
                     <aside className={stateInfoC2}>
-                      <div className='cuadroD2'>
-                        <div className='divSecc4A'>
-                          <p className='textCuadrosSecc4'>La robótica representa la cumbre en la trayectoria de desarrollo tecnológico, es decir, del diseño de herramientas. Su cometido es construir una herramienta que pueda desempeñar muchas de las labores que actualmente desempeña el ser humano, de manera más eficiente y rápida, o en condiciones y ambientes que al ser humano le serían inaccesibles.</p>
-                        </div> 
+                      <div className={stateInfoC3}>
+                        <div className='cuadroC2'>
+                          <div className='divSecc3A'>
+                            <h1 className="textCuadrosSecc3" htmlFor='secc3'>La robótica tiene en consideración:</h1>
+                              <label className="container textCuadrosSecc3">La ingeniería mecánica, ingeniería de alimentos, ingeniería electrónica, y se encarga del control, operación, y estudio de robots.
+                                <input type="radio" name="secc3" value="1"></input>
+                                <span className="checkmark"></span>
+                              </label>
+                              <label className="container textCuadrosSecc3">La ingeniería eléctrica, ingeniería electrónica y las ciencias de la computación, y se encarga del diseño, operación y aplicación de robots.
+                                <input type="radio" name="secc3" value="2"></input>
+                                <span className="checkmark"></span>
+                              </label>
+                              <label className="container textCuadrosSecc3">Todas las anteriores.
+                                <input type="radio" name="secc3" value="3"></input>
+                                <span className="checkmark"></span>
+                              </label>
+                              <label className="container textCuadrosSecc3">Ninguna de las anteriores.
+                                <input type="radio" name="secc3" value="4"></input>
+                                <span className="checkmark"></span>
+                              </label>  
+                              <aside className='divbuttonAnswer'>
+                                <button className='buttonAnswer' onClick={answerQue}>Responder</button>                        
+                              </aside>
+                          </div> 
+                        </div>
+                      </div>
+                      <div className={stateInfoC4}>
+                        <div className='cuadroD2'>
+                          <div className='divSecc4A'>
+                            <p className='textCuadrosSecc4'>La robótica representa la cumbre en la trayectoria de desarrollo tecnológico, es decir, del diseño de herramientas. Su cometido es construir una herramienta que pueda desempeñar muchas de las labores que actualmente desempeña el ser humano, de manera más eficiente y rápida, o en condiciones y ambientes que al ser humano le serían inaccesibles.</p>
+                          </div> 
+                        </div>
                       </div>
                     </aside> 
                   </div>
@@ -323,11 +356,11 @@ function App() {
             <section className='containerSecc' id="objetivos">            
               <div className="divSecc">     {/** este div contiene el titulo y button "V" */}
                 <div className='positionTittle'>     {/** Titulo de la sección */}                  
-                  <button className='textDiv' onClick={onDisplayD}><a href="#objetivos">Objetivos de la robótica</a></button>
+                  <button className='textDiv' onClick={onDisplay} id="displayD" name="menu"><a href="#objetivos">Objetivos de la robótica</a></button>
                 </div>
                 <div className="asideButton">     {/** button "V" */}
                   <aside>
-                    <button className='buttonMostrar' onClick={onDisplayD}><a href="#objetivos">V</a></button>
+                    <button className='buttonMostrar' onClick={onDisplay} id="displayD" name="menu"><a href="#objetivos">V</a></button>
                   </aside>
                 </div>
               </div>  
@@ -343,14 +376,14 @@ function App() {
                 <div className={stateInfoD1}>
                   <div className='cuadroC'>
                     <div className='cuadroC1'>
-                      <div className='divSecc3B'>
-                        <p className='textCuadrosSecc3'>Por definición un robot es una máquina automática programable capaz de realizar determinadas operaciones de manera autónoma y sustituir a los seres humanos en algunas tareas</p>
+                      <div className='divSecc4B'>
+                        <p className='textCuadrosSecc4'>Por definición un robot es una máquina automática programable capaz de realizar determinadas operaciones de manera autónoma y sustituir a los seres humanos en algunas tareas</p>
                       </div> 
                     </div>
                     <aside className={stateInfoD2}>
                       <div className='cuadroC2'>
-                        <div className='divSecc3A'>
-                          <p className='textCuadrosSecc3'>Como curiosidad, el término “robot” se popularizó por la obra R.U.R (Robots Universales Rossum) de Karel Čapek en 1920. En la traducción al inglés de la obra teatral, la palabra checa “robota”, que significa trabajos forzados o trabajador, fue traducida al inglés como robot.</p>
+                        <div className='divSecc4A'>
+                          <p className='textCuadrosSecc4'>Como curiosidad, el término “robot” se popularizó por la obra R.U.R (Robots Universales Rossum) de Karel Čapek en 1920. En la traducción al inglés de la obra teatral, la palabra checa “robota”, que significa trabajos forzados o trabajador, fue traducida al inglés como robot.</p>
                         </div> 
                       </div>
                     </aside> 
@@ -362,11 +395,11 @@ function App() {
             <section className='containerSecc' id="elementos">            
               <div className="divSecc">     {/** este div contiene el titulo y button "V" */}
                 <div className='positionTittle'>     {/** Titulo de la sección */}                  
-                  <button className='textDiv' onClick={onDisplayE}><a href="#elementos">¿Qué elementos conforman un robot?</a></button>
+                  <button className='textDiv' onClick={onDisplay} id="displayE" name="menu"><a href="#elementos">¿Qué elementos conforman un robot?</a></button>
                 </div>
                 <div className="asideButton">     {/** button "V" */}
                   <aside>
-                    <button className='buttonMostrar' onClick={onDisplayE}><a href="#elememtos">V</a></button>
+                    <button className='buttonMostrar' onClick={onDisplay} id="displayE" name="menu"><a href="#elememtos">V</a></button>
                   </aside>
                 </div>
               </div>  
@@ -380,11 +413,11 @@ function App() {
             <section className='containerSecc' id="tipos">            
               <div className="divSecc">     {/** este div contiene el titulo y button "V" */}
                 <div className='positionTittle'>     {/** Titulo de la sección */}                  
-                  <button className='textDiv' onClick={onDisplayF}><a href="#tipos">Tipos de movimeintos en robots</a></button>
+                  <button className='textDiv' onClick={onDisplay} id="displayF" name="menu"><a href="#tipos">Tipos de movimeintos en robots</a></button>
                 </div>
                 <div className="asideButton">     {/** button "V" */}
                   <aside>
-                    <button className='buttonMostrar' onClick={onDisplayF}><a href="#tipos">V</a></button>
+                    <button className='buttonMostrar' onClick={onDisplay} id="displayF" name="menu"><a href="#tipos">V</a></button>
                   </aside>
                 </div>
               </div>  
@@ -398,11 +431,11 @@ function App() {
             <section className='containerSecc' id="robot">            
               <div className="divSecc">     {/** este div contiene el titulo y button "V" */}
                 <div className='positionTittle'>     {/** Titulo de la sección */}                  
-                  <button className='textDiv' onClick={onDisplayG}><a href="#robot">Mi primer robot casero</a></button>
+                  <button className='textDiv' onClick={onDisplay} id="displayG" name="menu"><a href="#robot">Mi primer robot casero</a></button>
                 </div>
                 <div className="asideButton">     {/** button "V" */}
                   <aside>
-                    <button className='buttonMostrar' onClick={onDisplayG}><a href="#concepto">V</a></button>
+                    <button className='buttonMostrar' onClick={onDisplay} id="displayG" name="menu"><a href="#concepto">V</a></button>
                   </aside>
                 </div>
               </div>  
@@ -416,11 +449,11 @@ function App() {
             <section className='containerSecc' id="programacion">            
               <div className="divSecc">     {/** este div contiene el titulo y button "V" */}
                 <div className='positionTittle'>     {/** Titulo de la sección */}                  
-                  <button className='textDiv' onClick={onDisplayH}><a href="#programacion">Introducción a la programación</a></button>
+                  <button className='textDiv' onClick={onDisplay} id="displayH" name="menu"><a href="#programacion">Introducción a la programación</a></button>
                 </div>
                 <div className="asideButton">     {/** button "V" */}
                   <aside>
-                    <button className='buttonMostrar' onClick={onDisplayH}><a href="#programacion">V</a></button>
+                    <button className='buttonMostrar' onClick={onDisplay} id="displayH" name="menu"><a href="#programacion">V</a></button>
                   </aside>
                 </div>
               </div>  
@@ -434,11 +467,11 @@ function App() {
             <section className='containerSecc' id="bloques-codigo">            
               <div className="divSecc">     {/** este div contiene el titulo y button "V" */}
                 <div className='positionTittle'>     {/** Titulo de la sección */}                  
-                  <button className='textDiv' onClick={onDisplayI}><a href="#bloques-codigo">Programación por bloques Vs Código</a></button>
+                  <button className='textDiv' onClick={onDisplay} id="displayI" name="menu"><a href="#bloques-codigo">Programación por bloques Vs Código</a></button>
                 </div>
                 <div className="asideButton">     {/** button "V" */}
                   <aside>
-                    <button className='buttonMostrar' onClick={onDisplayI}><a href="#bloques-codigo">V</a></button>
+                    <button className='buttonMostrar' onClick={onDisplay} id="displayI" name="menu"><a href="#bloques-codigo">V</a></button>
                   </aside>
                 </div>
               </div>  
@@ -452,11 +485,11 @@ function App() {
             <section className='containerSecc' id="programacion-codigo">            
               <div className="divSecc">     {/** este div contiene el titulo y button "V" */}
                 <div className='positionTittle'>     {/** Titulo de la sección */}                  
-                  <button className='textDiv' onClick={onDisplayJ}><a href="#programacion-codigo">Programación básica por código</a></button>
+                  <button className='textDiv' onClick={onDisplay} id="displayJ" name="menu"><a href="#programacion-codigo">Programación básica por código</a></button>
                 </div>
                 <div className="asideButton">     {/** button "V" */}
                   <aside>
-                    <button className='buttonMostrar' onClick={onDisplayJ}><a href="#programacion-codigo">V</a></button>
+                    <button className='buttonMostrar' onClick={onDisplay} id="displayJ" name="menu"><a href="#programacion-codigo">V</a></button>
                   </aside>
                 </div>
               </div>  
@@ -470,11 +503,11 @@ function App() {
             <section className='containerSecc' id="programacion-robot">            
               <div className="divSecc">     {/** este div contiene el titulo y button "V" */}
                 <div className='positionTittle'>     {/** Titulo de la sección */}                  
-                  <button className='textDiv' onClick={onDisplayK}><a href="#programacion-robot">Mi primer robot programado</a></button>
+                  <button className='textDiv' onClick={onDisplay} id="displayK" name="menu"><a href="#programacion-robot">Mi primer robot programado</a></button>
                 </div>
                 <div className="asideButton">     {/** button "V" */}
                   <aside>
-                    <button className='buttonMostrar' onClick={onDisplayK}><a href="#programacion-robot">V</a></button>
+                    <button className='buttonMostrar' onClick={onDisplay} id="displayK" name="menu"><a href="#programacion-robot">V</a></button>
                   </aside>
                 </div>
               </div>  
