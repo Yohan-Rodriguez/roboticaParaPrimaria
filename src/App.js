@@ -109,11 +109,7 @@ function App() {
   const onDisplayE2 = () =>{   
     if (stateInfoE1==="divMostrarGral" && stateInfoE2==="divNoMostrar"){    /** Verifica si marco izquierdo se muestra en pantalla  */
       setStateInfoE2();     /** Habilita cuadro derecho general */
-      /** setStateInfoC4 se habilita con la función answerQue()*/
-    } else {
-      setStateInfoE2("divNoMostrar");  
-      setStateInfoE4("divNoMostrar");   /** Se deshabilita setStateInfoC4 porque en answerQue() se habilita */
-    }
+    } else { setStateInfoE2("divNoMostrar"); }
   } 
   const onDisplayE3 = () =>{   
     if (stateInfoE4==="divNoMostrar" && stateInfoE3==="divMostrarGral"){
@@ -394,7 +390,6 @@ function App() {
                     </div>
                   </aside>
                 </div>
-                <div className={stateInfoE3}>
                 <div className={stateInfoE2}>
                   <div className='cuadroIn'>
                     <div className='divCuadroGral textCuadrosGral'>
@@ -413,6 +408,7 @@ function App() {
                     </div> 
                   </div>
                 </div>
+                <div className={stateInfoE3}>
                   <iframe className="videoOne widthVideo5" src="https://www.youtube.com/embed/K_JYeWux0VQ" title="Actuadores en robótica" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>                                           
                 </div>
                 <div className='mostrarButtons5'>  
