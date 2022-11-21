@@ -5,6 +5,9 @@
   --borderMain: 0.3vw;    /* Ancho de bordes en titulos y botones "V" */
   --borderSecundary: 0.25vw;    /* Ancho de bordes en secciones "V" */
 }
+.test{
+  border: var(--borderSecundary) solid #ffff00;
+}
 .divMain{
   width: 100vw;
   height: auto;
@@ -95,8 +98,8 @@ a{
 a:hover{
   color: black;  
 }
+/* Stylo de los videos*/
 .videoOne{
-  width: 35vw;
   height: auto;
   margin: 2vw;
   margin-left: auto;
@@ -108,6 +111,67 @@ a:hover{
   border: var(--borderSecundary) solid #2df737;    
   border-radius: var(--radius);  
   background-color: rgba(255, 255, 255, 0.212);
+}
+.widthVideo{
+  width: 40vw;
+}
+/* DIV de los dos botones (1) y (2) */
+.mostrarButtons{      
+  width: 75.4vw;
+  height: auto;
+  display: inline-flex;   /* Centrar horizontalmente y equidistantes los eementos del div */  
+  border: var(--borderSecundary) solid #f76d2d;    
+}
+/* Posición del botón dentro del div de él */
+.divButtonGral{      
+  width: 38vw;
+  height: auto;
+  display: flex;
+  border: var(--borderSecundary) solid #bcc265;    
+}
+/* Estilos de los botones de acceso a los div´s de cada sección*/
+.buttonAccessDiv{
+  font-size: 3.91vw; 
+  color: #000C66;
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: var(--radius);
+  border: var(--borderSecundary) solid #ffff00;
+  cursor: pointer;
+}
+/* Posición de los botones de acceso a los div´s de cada sección dentro del div   ue contiene los botones*/
+.buttonAccessDiv2{
+  float: right;
+}
+/* Div´s cuadro de texto de cada sección al habilitar los botones */
+.cuadroGral{       /* DIV de los dos cuadros de texto */
+  width: auto;
+  border: var(--borderSecundary) solid #ff29a6;
+}
+/* Div individual dentro del div .cuadroGral */
+.cuadroIn{
+  width: 37vw;
+  height: auto;
+  display: inline-flex;  
+  margin: 1vw;
+}
+/* Style cuadros */
+.divCuadroGral{     /* DIV del cuadro2 */
+  border-radius: var(--radius);
+  background-color: #fff;
+  border: var(--borderSecundary) solid #2df737;  
+}
+.divCuadroGral2{         /* DIV del cuadro2 (flotante) */
+  float: right;
+}
+/* Style letters cuadros */
+.textCuadrosGral{
+  width: 30.24vw;
+  margin: 1em;  
+  font-family: 'Poppins';
+  color: #000000;
+  font-size: 1vw;  /*Tamaño de la fuente de la letra*/
+  text-align: justify;  /*Justificar texto del parrafo*/  
 }
 footer {
   border-radius: var(--radius);
@@ -123,87 +187,11 @@ footer {
   display:inline;
   white-space:pre;
 }
-.divMostrar{
+/* No muestra los div hasta que se haga clic en el botón correspondiente */
+.divNoMostrar{
   display: none;
 }
-.divMostrarA{
+/* Muestra el div que contiene todos los cuadros */
+.divMostrarGral{
   display: center;
-  align-items: center;
-  justify-content: center;
-}
-.divMostrarB{
-  display: center;
-  align-items: center;
-  justify-content: center;
-}
-.divMostrarC{
-  display: center;
-  align-items: center;
-  justify-content: center;
-}
-.divMostrarC1{
-  display: center;
-}
-.divMostrarC2{
-  display: center;
-  align-items: center;
-  justify-content: center;
-}
-.divMostrarC3{
-  display: center;
-  align-items: center;
-  justify-content: center;
-}
-.divMostrarC4{
-  display: center;
-  align-items: center;
-  justify-content: center;
-}
-.divMostrarD{
-  display: center;
-  align-items: center;
-  justify-content: center;
-}
-.divMostrarD1{
-  display: center;
-}
-.divMostrarD2{
-  display: center;
-  align-items: center;
-  justify-content: center;
-}
-.divMostrarE{
-  display: center;
-  align-items: center;
-  justify-content: center;
-}
-.divMostrarF{
-  display: center;
-  align-items: center;
-  justify-content: center;
-}
-.divMostrarG{
-  display: center;
-  align-items: center;
-  justify-content: center;
-}
-.divMostrarH{
-  display: center;
-  align-items: center;
-  justify-content: center;
-}
-.divMostrarI{
-  display: center;
-  align-items: center;
-  justify-content: center;
-}
-.divMostrarJ{
-  display: center;
-  align-items: center;
-  justify-content: center;
-}
-.divMostrarK{
-  display: center;
-  align-items: center;
-  justify-content: center;
 }

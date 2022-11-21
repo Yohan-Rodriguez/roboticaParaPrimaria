@@ -11,11 +11,11 @@
   text-align: center;  /*Ubicación del texto*/
 }
 .textSeccOneA{
-  width: 33.2vw;
+  width: auto;
   margin: 1em;  
   font-family: 'Poppins';
   color: #000000;
-  font-size: 1.1vw;  /*Tamaño de la fuente de la letra*/
+  font-size: 1vw;  /*Tamaño de la fuente de la letra*/
   text-align: justify;  /*Justificar texto del parrafo*/  
 }
 .divSeccOneB{
@@ -27,10 +27,10 @@
   top: 0;
 }
 .textSeccOneB{
-  width: 30.24vw;
+  width: auto;
   margin: 1em;  
   font-family: 'Poppins';
   color: #000000;
-  font-size: 1.1vw;  /*Tamaño de la fuente de la letra*/
+  font-size: 1vw;  /*Tamaño de la fuente de la letra*/
   text-align: justify;  /*Justificar texto del parrafo*/  
 }

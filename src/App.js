@@ -7,29 +7,32 @@ import './styles/secc1.css';
 import './styles/secc2.css';
 import './styles/secc3.css';
 import './styles/secc4.css';
-// import './styles/seccThree.css';
+import './styles/secc5.css';
 
 
 function App() {
   /** MOSTRAR DIV DE CADA SECCIÓN --------------------------------------------------*/
-  const [stateInfoA, setStateInfoA] = useState("divMostrar");
-  const [stateInfoB, setStateInfoB] = useState("divMostrar");
-  const [stateInfoC, setStateInfoC] = useState("divMostrar");
-  const [stateInfoC1, setStateInfoC1] = useState("divMostrar");   /** Div marco izquierdo */
-  const [stateInfoC2, setStateInfoC2] = useState("divMostrar");   /** Div marco derecho general*/
-  const [stateInfoC3, setStateInfoC3] = useState("divMostrar");   /** Div marco derecho Pregunta*/
-  const [stateInfoC4, setStateInfoC4] = useState("divMostrar");   /** Div marco derecho Respuesta correcta*/
-  const [stateInfoD, setStateInfoD] = useState("divMostrar");
-  const [stateInfoD1, setStateInfoD1] = useState("divMostrar");
-  const [stateInfoD2, setStateInfoD2] = useState("divMostrar");
-  const [stateInfoE, setStateInfoE] = useState("divMostrar");
-  const [stateInfoF, setStateInfoF] = useState("divMostrar");
-  const [stateInfoG, setStateInfoG] = useState("divMostrar");
-  const [stateInfoH, setStateInfoH] = useState("divMostrar");
-  const [stateInfoI, setStateInfoI] = useState("divMostrar");
-  const [stateInfoJ, setStateInfoJ] = useState("divMostrar");
-  const [stateInfoK, setStateInfoK] = useState("divMostrar");
-  // const [stateGeneral, setStateGeneral] = useState("divMostrar");
+  const [stateInfoA, setStateInfoA] = useState("divNoMostrar");
+  const [stateInfoB, setStateInfoB] = useState("divNoMostrar");
+  const [stateInfoC, setStateInfoC] = useState("divNoMostrar");
+  const [stateInfoC1, setStateInfoC1] = useState("divNoMostrar");   /** Div marco izquierdo */
+  const [stateInfoC2, setStateInfoC2] = useState("divNoMostrar");   /** Div marco derecho general*/
+  const [stateInfoC3, setStateInfoC3] = useState("divNoMostrar");   /** Div marco derecho Pregunta*/
+  const [stateInfoC4, setStateInfoC4] = useState("divNoMostrar");   /** Div marco derecho Respuesta correcta*/
+  const [stateInfoD, setStateInfoD] = useState("divNoMostrar");
+  const [stateInfoD1, setStateInfoD1] = useState("divNoMostrar");
+  const [stateInfoD2, setStateInfoD2] = useState("divNoMostrar");
+  const [stateInfoE, setStateInfoE] = useState("divNoMostrar");
+  const [stateInfoE1, setStateInfoE1] = useState("divNoMostrar");
+  const [stateInfoE2, setStateInfoE2] = useState("divNoMostrar");
+  const [stateInfoE3, setStateInfoE3] = useState("divNoMostrar");
+  const [stateInfoE4, setStateInfoE4] = useState("divNoMostrar");
+  const [stateInfoF, setStateInfoF] = useState("divNoMostrar");
+  const [stateInfoG, setStateInfoG] = useState("divNoMostrar");
+  const [stateInfoH, setStateInfoH] = useState("divNoMostrar");
+  const [stateInfoI, setStateInfoI] = useState("divNoMostrar");
+  const [stateInfoJ, setStateInfoJ] = useState("divNoMostrar");
+  const [stateInfoK, setStateInfoK] = useState("divNoMostrar");
   
   const onDisplay = function () {
     var test =document.querySelectorAll('button[name=menu]');
@@ -39,138 +42,113 @@ function App() {
         console.log("El id del botón es "+ stateGeneral);
 
         if (stateGeneral === "displayA") {
-          if (stateInfoA==="divMostrar") {
-            setStateInfoA("divMostrarA");
-            console.log(stateInfoA);
-          } else {
-            setStateInfoA("divMostrar");
-            console.log(stateInfoA);
-          }
+          if (stateInfoA==="divNoMostrar") { setStateInfoA("divMostrarCuadro"); }
+          else { setStateInfoA("divNoMostrar"); }
         } else if (stateGeneral === "displayB"){
-          if (stateInfoB==="divMostrar"){
-            setStateInfoB("divMostrarB");
-            console.log(stateInfoB);
-          } else{
-            setStateInfoB("divMostrar");
-            console.log(stateInfoB);
-          }
+          if (stateInfoB==="divNoMostrar"){ setStateInfoB("divMostrarCuadro"); } 
+          else { setStateInfoB("divNoMostrar"); }
         } else if (stateGeneral === "displayC") {
-          if (stateInfoC==="divMostrar"){
-            setStateInfoC("divMostrarC");
-          } else{
-            setStateInfoC("divMostrar");
-          }
+          if (stateInfoC==="divNoMostrar"){ setStateInfoC("divMostrarCuadro"); } 
+          else { setStateInfoC("divNoMostrar"); }
         } else if (stateGeneral === "displayD") {
-          if (stateInfoD==="divMostrar"){
-            setStateInfoD("divMostrarD");
-            console.log(stateInfoD);
-          } else{
-            setStateInfoD("divMostrar");
-            console.log(stateInfoD);
-          }
+          if (stateInfoD==="divNoMostrar"){ setStateInfoD("divMostrarCuadro"); } 
+          else { setStateInfoD("divNoMostrar"); }
         } else if (stateGeneral === "displayE") {
-          if (stateInfoE==="divMostrar"){
-            setStateInfoE("divMostrarE");
-            console.log(stateInfoE);
-          } else{
-            setStateInfoE("divMostrar");
-            console.log(stateInfoE);
-          }
+          if (stateInfoE==="divNoMostrar"){ setStateInfoE("divMostrarCuadro"); } 
+          else { setStateInfoE("divNoMostrar"); }
         } else if (stateGeneral === "displayF") {
-          if (stateInfoF==="divMostrar"){
-            setStateInfoF("divMostrarF");
-            console.log(stateInfoF);
-          } else{
-            setStateInfoF("divMostrar");
-            console.log(stateInfoF);
-          }
+          if (stateInfoF==="divNoMostrar"){ setStateInfoF("divMostrarCuadro"); } 
+          else { setStateInfoF("divNoMostrar"); }
         } else if (stateGeneral === "displayG") {
-          if (stateInfoG==="divMostrar"){
-            setStateInfoG("divMostrarG");
-            console.log(stateInfoG);
-          } else{
-            setStateInfoG("divMostrar");
-            console.log(stateInfoG);
-          }
+          if (stateInfoG==="divNoMostrar"){ setStateInfoG("divMostrarCuadro"); }
+          else { setStateInfoG("divNoMostrar"); }
         } else if (stateGeneral === "displayH") {
-          if (stateInfoH==="divMostrar"){
-            setStateInfoH("divMostrarH");
-            console.log(stateInfoH);
-          } else{
-            setStateInfoH("divMostrar");
-            console.log(stateInfoH);
-          }
+          if (stateInfoH==="divNoMostrar"){ setStateInfoH("divMostrarCuadro"); } 
+          else { setStateInfoH("divNoMostrar"); }
         } else if (stateGeneral === "displayI") {
-          if (stateInfoI==="divMostrar"){
-            setStateInfoI("divMostrarI");
-            console.log(stateInfoI);
-          } else{
-            setStateInfoI("divMostrar");
-            console.log(stateInfoI);
-          }
+          if (stateInfoI==="divNoMostrar"){ setStateInfoI("divMostrarCuadro"); } 
+          else { setStateInfoI("divNoMostrar"); }
         } else if (stateGeneral === "displayJ") {
-          if (stateInfoJ==="divMostrar"){
-            setStateInfoJ("divMostrarJ");
-            console.log(stateInfoJ);
-          } else{
-            setStateInfoJ("divMostrar");
-            console.log(stateInfoJ);
-          }
+          if (stateInfoJ==="divNoMostrar"){ setStateInfoJ("divMostrarCuadro"); } 
+          else { setStateInfoJ("divNoMostrar");}
         } else if (stateGeneral === "displayK") {
-          if (stateInfoK==="divMostrar"){
-            setStateInfoK("divMostrarK");
-            console.log(stateInfoK);
-          } else{
-            setStateInfoK("divMostrar");
-            console.log(stateInfoK);
-          }
+          if (stateInfoK==="divNoMostrar"){ setStateInfoK("divMostrarCuadro");} 
+          else { setStateInfoK("divNoMostrar"); }
         }
       }); 
     }
   } 
-  const onDisplayC1 = () =>{   
-    if (stateInfoC1==="divMostrar"){
-      setStateInfoC1("divMostrarC1");
-    } else{
-      setStateInfoC1("divMostrar");
-    }
+
+  // Funciones respectivos a los botones dentro de cada sección-------------------------------------------------------------
+  const onDisplayC1 = () => {   
+    if (stateInfoC1==="divNoMostrar") { setStateInfoC1("divMostrarGral"); }   /** Habilita cuadro izquierdo */
+    else { setStateInfoC1("divNoMostrar"); }  /** Deshabilita cuadro izquierdo */
   } 
   const onDisplayC2 = () =>{   
-    if (stateInfoC1==="divMostrarC1" && stateInfoC2==="divMostrar"){    /** Verifica si marco izquierdo se muestra en pantalla  */
-      setStateInfoC2("divMostrarC2");     /** Habilita marco derecho general */
-      setStateInfoC3("divMostrarC3");     /** Habilita marco derecho pregunta */
-      setStateInfoC4("divMostrar");
-      console.log("Sonríe");
-    }else{
-      setStateInfoC2("divMostrar");     
-      setStateInfoC3("divMostrar");
-      setStateInfoC4("divMostrar");
-      console.log("Imbécil.")
+    if (stateInfoC1==="divMostrarGral" && stateInfoC2==="divNoMostrar"){    /** Verifica si marco izquierdo se muestra en pantalla  */
+      setStateInfoC2();     /** Habilita cuadro derecho general */
+      setStateInfoC3();     /** Habilita cuadro derecho pregunta */
+      /** setStateInfoC4 se habilita con la función answerQue()*/
+    } else {
+      setStateInfoC2("divNoMostrar");  
+      setStateInfoC4("divNoMostrar");   /** Se deshabilita setStateInfoC4 porque en answerQue() se habilita */
     }
   } 
   const onDisplayD1 = () =>{   
-    if (stateInfoD1==="divMostrar"){
-      setStateInfoD1("divMostrarD1");
-      console.log(stateInfoD1);
-    } else{
-      setStateInfoD1("divMostrar");
-      console.log(stateInfoD1);
-    }
+    if (stateInfoD1==="divNoMostrar") { setStateInfoD1("divMostrarGral"); }  /** Habilita cuadro izquierdo */
+    else { setStateInfoD1("divNoMostrar"); }   /** Deshabilita cuadro izquierdo */
   } 
   const onDisplayD2 = () =>{   
-    if (stateInfoD2==="divMostrar" && stateInfoD1==="divMostrarD1"){
-      setStateInfoD2("divMostrarD2");
-      console.log(stateInfoD2);
-    } else{
-      setStateInfoD2("divMostrar");
-      console.log(stateInfoD2);
+    if (stateInfoD2==="divNoMostrar" && stateInfoD1==="divMostrarGral"){ setStateInfoD2(); }   /** Habilita cuadro derecho */
+    else { setStateInfoD2("divNoMostrar"); }   /** Deshabilita cuadro derecho */
+  } 
+  const onDisplayE1 = () => {   
+    if (stateInfoE1==="divNoMostrar") { setStateInfoE1("divMostrarGral"); }   /** Habilita cuadro izquierdo */
+    else { setStateInfoE1("divNoMostrar"); }  /** Deshabilita cuadro izquierdo */
+  } 
+  const onDisplayE2 = () =>{   
+    if (stateInfoE1==="divMostrarGral" && stateInfoE2==="divNoMostrar"){    /** Verifica si marco izquierdo se muestra en pantalla  */
+      setStateInfoE2();     /** Habilita cuadro derecho general */
+      /** setStateInfoC4 se habilita con la función answerQue()*/
+    } else {
+      setStateInfoE2("divNoMostrar");  
+      setStateInfoE4("divNoMostrar");   /** Se deshabilita setStateInfoC4 porque en answerQue() se habilita */
     }
   } 
+  const onDisplayE3 = () =>{   
+    if (stateInfoE4==="divNoMostrar" && stateInfoE3==="divMostrarGral"){
+      setStateInfoE4("divMostrarGral");
+    } else{
+      setStateInfoE4("divNoMostrar");
+    }
+  } 
+  const onDisplayE4 = () =>{   
+    if (stateInfoE4==="divNoMostrar" && stateInfoE3==="divMostrarGral"){
+      setStateInfoE4("divMostrarGral");
+    } else{
+      setStateInfoE4("divNoMostrar");
+    }
+  } 
+  const onDisplayE5 = () =>{   
+    if (stateInfoE4==="divNoMostrar" && stateInfoE3==="divMostrarGral"){
+      setStateInfoE4("divMostrarGral");
+    } else{
+      setStateInfoE4("divNoMostrar");
+    }
+  } 
+
+  // PREGUNTAS: -----------------------------------------------------------------------------------------
   const answerQue = () =>{
-    if (document.querySelector('input[name=secc3]:checked').value === "2"){     /** Verifica validez de la respuesta */
-      setStateInfoC3("divMostrar")      /** Oculta marco derecho pregunta */
-      setStateInfoC4("divMostrarC4")    /** Habilita marco derecho respuesta correcta */
-      console.log("1");
+    if (document.querySelector('input[name=answer]:checked').value === "1"){     /** Verifica validez de la respuesta */    
+      let labelId = document.querySelector('input[name=answer]:checked').id;
+
+      if (labelId === "labelAnswerC"){
+        setStateInfoC3("divNoMostrar");     /** Oculta marco derecho pregunta */
+        setStateInfoC4("divMostrarGral");    /** Habilita marco derecho respuesta correcta */
+      } else if (labelId === "labelAnswerE"){
+        setStateInfoE2("divNoMostrar");     /** Oculta marco derecho pregunta */
+        setStateInfoE3("divMostrarGral");    /** Habilita marco derecho respuesta correcta */
+      }       
     }
     else{
       alert("Respuesta Incorrecta. Try again!");
@@ -248,7 +226,7 @@ function App() {
                   <h1 className='tittleSeccOneA'>Presentación del sofware</h1>  
                   <p className='textSeccOneA'>Robótica para estudiantes de primaria es un proyecto enfocado a la inmersión y fortalecimiento en conocimientos tecnológicos en edades tempranas de estudiantes de instituciones de educación públicas y/o privadas, especificamente en el ambito de la robótica, tocando temas que abordan la fundamentación y saberes básicos de está área, la historia, progreso y aportes a través del tiempo de la robótica a la sociedad; un vistazo amigable al paradigma de la programación, conceptos básicos e intemedios de está; elementos y movimientos aplicables en robots, de fácil entendimiento y abstracción que pueden ser estudiados para diseñar y obtener prototipos que cumplan una función específica.</p>
                 </div>     
-                <iframe className="videoOne" src="https://www.youtube.com/embed/WlQNLSKwM5Q" title="¿Qué es la Robotica? Para que sirve y cuales son sus disciplinas?!?" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>                     
+                <iframe className="videoOne widthVideo" src="https://www.youtube.com/embed/WlQNLSKwM5Q" title="¿Qué es la Robotica? Para que sirve y cuales son sus disciplinas?!?" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>                     
               </div> 
             </section>
             {/** SECCIOÓN DOS: HISTOTRIA ------------------------------------------------------------------------------*/}
@@ -278,11 +256,11 @@ function App() {
                   </div>
                   <div>
                     <div>
-                      <p className='widthDivTextB textSeccTwoA'>Por siglos, el ser humano ha construido máquinas que imitan partes del cuerpo humano. Los antiguos egipcios unieron brazos mecánicos a las estatuas de sus dioses; los griegos construyeron estatuas que operaban con sistemas hidráulicos, los cuales eran utilizados para fascinar a los adoradores de los templos.<br></br><br></br>El inicio de la robótica actual puede fijarse en la industria textil del siglo XVIII, cuando Joseph Jacquard inventa en 1801 una máquina textil programable mediante tarjetas perforadas. Luego, la Revolución Industrial impulsó el desarrollo de estos agentes mecánicos. Además de esto, durante los siglos XVII y XVIII en Europa fueron construidos muñecos mecánicos muy ingeniosos que tenían algunas características de robots. Jacques de Vauncansos construyó varios músicos de tamaño humano a mediados del siglo XVIII.En 1805, Henri Maillardert construyó una muñeca mecánica que era capaz de hacer dibujos.<br></br><br></br>La palabra robot se utilizó por primera vez en 1920 en una obra llamada "Los Robots Universales de Rossum", escrita por el dramaturgo checo Karel Capek. Su trama trataba sobre un hombre que fabricó un robot y luego este último mata al hombre. La palabra checa 'Robota' significa servidumbre o trabajado forzado, y cuando se tradujo al ingles se convirtió en el término robot.<br></br><br></br>Son varios los factores que intervienen para que se desarrollaran los primeros robots en la década de los 50's. La investigación en inteligencia artificial desarrolló maneras de emular el procesamiento de información humana con computadoras electrónicas e inventó una variedad de mecanismos para probar sus teorías.<br></br><br></br><span className='tabulacion'>    * </span>Las primeras patentes aparecieron en 1946 con los muy primitivos robots para traslado de maquinaria de Devol.<br></br><br></br><span className='tabulacion'>    * </span>En 1954, Devol diseña el primer robot programable.<br></br><br></br><span className='tabulacion'>    * </span>En 1960 se introdujo el primer robot "Unimate'', basada en la transferencia de artículos.<br></br><br></br><span className='tabulacion'>    * </span>En 1961 Un robot Unimate se instaló en la Ford Motors Company para atender una máquina de fundición de troquel.<br></br><br></br><span className='tabulacion'>    * </span>En 1966 Trallfa, una firma noruega, construyó e instaló un robot de pintura por pulverización.<br></br><br></br><span className='tabulacion'>    * </span>En 1971 El "Standford Arm'', un pequeño brazo de robot de accionamiento eléctrico, se desarrolló en la Standford University.<br></br><br></br><span className='tabulacion'>    * </span>En 1978 Se introdujo el robot PUMA para tareas de montaje por Unimation, basándose en diseños obtenidos en un estudio de la General Motors.<br></br><br></br>En los setenta, la NASA inicio un programa de cooperación con el Jet Propulsión Laboratory para desarrollar plataformas capaces de explorar terrenos hostiles.<br></br><br></br>En la actualidad, la robótica se debate entre modelos sumamente ambiciosos, como es el caso del IT, diseñado para expresar emociones, el COG, tambien conocido como el robot de cuatro sentidos, el famoso SOUJOURNER o el LUNAR ROVER, vehículo de turismo con control remotos, y otros mucho mas específicos como el CYPHER, un helicóptero robot de uso militar, el guardia de trafico japonés ANZEN TARO o los robots mascotas de Sony.</p>        
+                      <p className='widthDivTextB textSeccTwoA'>Por siglos, el ser humano ha construido máquinas que imitan partes del cuerpo humano. Los antiguos egipcios unieron brazos mecánicos a las estatuas de sus dioses; los griegos construyeron estatuas que operaban con sistemas hidráulicos, los cuales eran utilizados para fascinar a los adoradores de los templos.<br></br><br></br>El inicio de la robótica actual puede fijarse en la industria textil del siglo XVIII, cuando Joseph Jacquard inventa en 1801 una máquina textil programable mediante tarjetas perforadas. Luego, la Revolución Industrial impulsó el desarrollo de estos agentes mecánicos. Además de esto, durante los siglos XVII y XVIII en Europa fueron construidos muñecos mecánicos muy ingeniosos que tenían algunas características de robots. Jacques de Vauncansos construyó varios músicos de tamaño humano a mediados del siglo XVIII.En 1805, Henri Maillardert construyó una muñeca mecánica que era capaz de hacer dibujos.<br></br><br></br>La palabra robot se utilizó por primera vez en 1920 en una obra llamada "Los Robots Universales de Rossum", escrita por el dramaturgo checo Karel Capek. Su trama trataba sobre un hombre que fabricó un robot y luego este último mata al hombre. La palabra checa 'Robota' significa servidumbre o trabajado forzado, y cuando se tradujo al ingles se convirtió en el término robot.<br></br><br></br>Son varios los factores que intervienen para que se desarrollaran los primeros robots en la década de los 50's. La investigación en inteligencia artificial desarrolló maneras de emular el procesamiento de información humana con computadoras electrónicas e inventó una variedad de mecanismos para probar sus teorías.<br></br><br></br><span className='tabulacion'>    * </span>Las primeras patentes aparecieron en 1946 con los muy primitivos robots para traslado de maquinaria de Devol.<br></br><br></br><span className='tabulacion'>    * </span>En 1954, Devol diseña el primer robot programable.<br></br><br></br><span className='tabulacion'>    * </span>En 1960 se introdujo el primer robot "Unimate'', basada en la transferencia de artículos.<br></br><br></br><span className='tabulacion'>    * </span>En 1961 Un robot Unimate se instaló en la Ford Motors Company para atender una máquina de fundición de troquel.<br></br><br></br><span className='tabulacion'>    * </span>En 1966 Trallfa, una firma noruega, construyó e instaló un robot de pintura por pulverización.<br></br><br></br><span className='tabulacion'>    * </span>En 1971 El "Standford Arm'', un pequeño brazo de robot de accionamiento eléctrico, se desarrolló en la Standford University.<br></br><br></br><span className='tabulacion'>    * </span>En 1978 Se introdujo el robot PUMA para tareas de montaje por Unimation, basándose en diseños obtenidos en un estudio de la General Motors.<br></br><br></br>En la actualidad, la robótica se debate entre modelos sumamente ambiciosos, como es el caso del IT, diseñado para expresar emociones, el COG, tambien conocido como el robot de cuatro sentidos, el famoso SOUJOURNER o el LUNAR ROVER, vehículo de turismo con control remotos, y otros mucho mas específicos como el CYPHER, un helicóptero robot de uso militar, el guardia de trafico japonés ANZEN TARO o los robots mascotas de Sony.</p>        
                     </div>
                   </div>
                 </div>                                
-                <iframe className="videoOne" src="https://www.youtube.com/embed/4Q3vfQKaCQI" title="HISTORIA DE LA ROBÓTICA 🤖 | Los datos más ASOMBROSOS" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>                     
+                <iframe className="videoOne widthVideo" src="https://www.youtube.com/embed/4Q3vfQKaCQI" title="HISTORIA DE LA ROBÓTICA 🤖 | Los datos más ASOMBROSOS" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>                     
               </div>
             </section>        
             {/** SECCIOÓN TRES:CONCEPTO SGENERALES ------------------------------------------------------------------------------*/}
@@ -298,40 +276,40 @@ function App() {
                 </div>
               </div>  
               <div className={stateInfoC}>      {/** Contenido de la sección */}
-                <div className='mostarButtonsD'>  
-                  <div className='divButtonD1'>
-                    <button className='c1' onClick={onDisplayC1}>1</button>
+                <div className='mostrarButtons'>  
+                  <div className='divButtonGral justifyButton3'>
+                    <button className='buttonAccessDiv' onClick={onDisplayC1}>1</button>
                   </div>
-                  <aside className='divButtonD2'>
-                    <button className='c2' onClick={onDisplayC2}>2</button>
+                  <aside className='divButtonGral justifyButton3'>
+                    <button className='buttonAccessDiv buttonAccessDiv2' onClick={onDisplayC2}>2</button>
                   </aside>
                 </div>
                 <div className={stateInfoC1}>      {/** Tutulo de la sección */}
-                  <div className='cuadroC'>
-                    <div className='cuadroC1'>
-                      <div className='divSecc3B'>
-                        <p className='textCuadrosSecc3'>La robótica es una disciplina que se ocupa del diseño, operación, manufacturación, estudio y aplicación de autómatas o robots. Para ello, combina la ingeniería mecánica, ingeniería eléctrica, ingeniería electrónica, ingeniería biomédica y las ciencias de la computación, así como otras disciplinas.</p>
+                  <div className='cuadroGral positionCuadroGral3'>
+                    <div className='cuadroIn'>
+                      <div className='divCuadroGral'>
+                        <p className='textCuadrosGral'>La robótica es una disciplina que se ocupa del diseño, operación, manufacturación, estudio y aplicación de autómatas o robots. Para ello, combina la ingeniería mecánica, ingeniería eléctrica, ingeniería electrónica, ingeniería biomédica y las ciencias de la computación, así como otras disciplinas.</p>
                       </div> 
                     </div>
                     <aside className={stateInfoC2}>
                       <div className={stateInfoC3}>
-                        <div className='cuadroC2'>
-                          <div className='divSecc3A'>
-                            <h1 className="textCuadrosSecc3" htmlFor='secc3'>La robótica tiene en consideración:</h1>
-                              <label className="container textCuadrosSecc3">La ingeniería mecánica, ingeniería de alimentos, ingeniería electrónica, y se encarga del control, operación, y estudio de robots.
-                                <input type="radio" name="secc3" value="1"></input>
+                        <div className='cuadroIn'>
+                          <div className='divCuadroGral textCuadrosGral'>
+                            <h1 className="container textCuadrosGral" htmlFor='answer'>La robótica tiene en consideración:</h1>
+                              <label className="container textCuadrosGral">La ingeniería mecánica, ingeniería de alimentos, ingeniería electrónica, y se encarga del control, operación, y estudio de robots.
+                                <input id='labelAnswerC' type="radio" name="answer" value="2"></input>
                                 <span className="checkmark"></span>
                               </label>
-                              <label className="container textCuadrosSecc3">La ingeniería eléctrica, ingeniería electrónica y las ciencias de la computación, y se encarga del diseño, operación y aplicación de robots.
-                                <input type="radio" name="secc3" value="2"></input>
+                              <label className="container textCuadrosGral">La ingeniería eléctrica, ingeniería electrónica y las ciencias de la computación, y se encarga del diseño, operación y aplicación de robots.
+                                <input id='labelAnswerC' type="radio" name="answer" value="1"></input>
                                 <span className="checkmark"></span>
                               </label>
-                              <label className="container textCuadrosSecc3">Todas las anteriores.
-                                <input type="radio" name="secc3" value="3"></input>
+                              <label className="container textCuadrosGral">Todas las anteriores.
+                                <input id='labelAnswerC' type="radio" name="answer" value="3"></input>
                                 <span className="checkmark"></span>
                               </label>
-                              <label className="container textCuadrosSecc3">Ninguna de las anteriores.
-                                <input type="radio" name="secc3" value="4"></input>
+                              <label className="container textCuadrosGral">Ninguna de las anteriores.
+                                <input id='labelAnswerC' type="radio" name="answer" value="4"></input>
                                 <span className="checkmark"></span>
                               </label>  
                               <aside className='divbuttonAnswer'>
@@ -341,9 +319,9 @@ function App() {
                         </div>
                       </div>
                       <div className={stateInfoC4}>
-                        <div className='cuadroD2'>
-                          <div className='divSecc4A'>
-                            <p className='textCuadrosSecc4'>La robótica representa la cumbre en la trayectoria de desarrollo tecnológico, es decir, del diseño de herramientas. Su cometido es construir una herramienta que pueda desempeñar muchas de las labores que actualmente desempeña el ser humano, de manera más eficiente y rápida, o en condiciones y ambientes que al ser humano le serían inaccesibles.</p>
+                        <div className='cuadroIn'>
+                          <div className='divCuadroGral'>
+                            <p className='textCuadrosGral'>La robótica representa la cumbre en la trayectoria de desarrollo tecnológico, es decir, del diseño de herramientas. Su cometido es construir una herramienta que pueda desempeñar muchas de las labores que actualmente desempeña el ser humano, de manera más eficiente y rápida, o en condiciones y ambientes que al ser humano le serían inaccesibles.</p>
                           </div> 
                         </div>
                       </div>
@@ -365,25 +343,25 @@ function App() {
                 </div>
               </div>  
               <div className={stateInfoD}>      {/** Tutulo de la sección */}
-                <div className='mostarButtonsD'>  
-                  <div className='divButtonD1'>
-                    <button className='d1' onClick={onDisplayD1}>1</button>
+                <div className='mostrarButtons'>  
+                  <div className='divButtonGral justifyButton4'>
+                    <button className='buttonAccessDiv' onClick={onDisplayD1}>1</button>
                   </div>
-                  <aside className='divButtonD2'>
-                    <button className='d2' onClick={onDisplayD2}>2</button>
+                  <aside className='divButtonGral justifyButton4'>
+                    <button className='buttonAccessDiv buttonAccessDiv2' onClick={onDisplayD2}>2</button>
                   </aside>
                 </div>
                 <div className={stateInfoD1}>
-                  <div className='cuadroC'>
-                    <div className='cuadroC1'>
-                      <div className='divSecc4B'>
-                        <p className='textCuadrosSecc4'>Por definición un robot es una máquina automática programable capaz de realizar determinadas operaciones de manera autónoma y sustituir a los seres humanos en algunas tareas</p>
+                  <div className='cuadroGral positionCuadroGral4'>
+                    <div className='cuadroIn'>
+                      <div className='divCuadroGral'>
+                        <p className='textCuadrosGral'>Por definición un robot es una máquina automática programable capaz de realizar determinadas operaciones de manera autónoma y sustituir a los seres humanos en algunas tareas</p>
                       </div> 
                     </div>
                     <aside className={stateInfoD2}>
-                      <div className='cuadroC2'>
-                        <div className='divSecc4A'>
-                          <p className='textCuadrosSecc4'>Como curiosidad, el término “robot” se popularizó por la obra R.U.R (Robots Universales Rossum) de Karel Čapek en 1920. En la traducción al inglés de la obra teatral, la palabra checa “robota”, que significa trabajos forzados o trabajador, fue traducida al inglés como robot.</p>
+                      <div className='cuadroIn'>
+                        <div className='divCuadroGral divCuadroGral2'>
+                          <p className='textCuadrosGral'>Como curiosidad, el término “robot” se popularizó por la obra R.U.R (Robots Universales Rossum) de Karel Čapek en 1920. En la traducción al inglés de la obra teatral, la palabra checa “robota”, que significa trabajos forzados o trabajador, fue traducida al inglés como robot.</p>
                         </div> 
                       </div>
                     </aside> 
@@ -404,8 +382,61 @@ function App() {
                 </div>
               </div>  
               <div className={stateInfoE}>      {/** Contenido de la sección */}
-                <div className='containerSecc'>
-                  <h1>Elementos</h1>
+                <div className='mostrarButtons5'>  
+                  <div className='divButtonGral5'>
+                    <div className='cuadro5A justifyButton5A'>
+                      <button className='buttonAccessDiv' onClick={onDisplayE2}>2</button>
+                    </div>
+                  </div>
+                  <aside className='divButtonGral5'>
+                    <div className='cuadro5A justifyButton5B'>
+                      <button className='buttonAccessDiv buttonAccessDiv2' onClick={onDisplayE3}>3</button>
+                    </div>
+                  </aside>
+                </div>
+                <div className={stateInfoE3}>
+                <div className={stateInfoE2}>
+                  <div className='cuadroIn'>
+                    <div className='divCuadroGral textCuadrosGral'>
+                      <h1 className="container textCuadrosGral" htmlFor='answer'>Si los sensores en los robots actuan igual que los sentidos en los seres humanos, ¿es correcto afirmar que un robot con ayuda de sus sensores puede esquivar obstáculos?:</h1>
+                        <label className="container textCuadrosGral">True.
+                          <input id='labelAnswerE' type="radio" name="answer" value="1"></input>
+                          <span className="checkmark"></span>
+                        </label>
+                        <label className="container textCuadrosGral">False.
+                          <input id='labelAnswerE' type="radio" name="answer" value="2"></input>
+                          <span className="checkmark"></span>
+                        </label>                                 
+                        <aside className='divbuttonAnswer'>
+                          <button className='buttonAnswer' onClick={answerQue}>Responder</button>                        
+                        </aside>
+                    </div> 
+                  </div>
+                </div>
+                  <iframe className="videoOne widthVideo5" src="https://www.youtube.com/embed/K_JYeWux0VQ" title="Actuadores en robótica" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>                                           
+                </div>
+                <div className='mostrarButtons5'>  
+                  <div className='divButtonGral5'>
+                    <div className='cuadro5A justifyButton5'>
+                      <button className='buttonAccessDiv' onClick={onDisplayE1}>1</button>
+                    </div>
+                  </div>
+                  <aside className='divButtonGral justifyButton5'>
+                    <button className='buttonAccessDiv buttonAccessDiv2' onClick={onDisplayE4}>4</button>
+                  </aside>
+                </div>
+                <div className={stateInfoE1}>
+                  <div className='cuadroGral5'>
+                    <div className='divCuadroGral paddCuadro5'>
+                      <h1 className='textCuadrosGral'>Sensores</h1>
+                      <p className='textCuadrosGral'>Del mismo modo que los seres vivos se guían por los sentidos, los robots utilizan los sensores. Su función es la de recabar información del entorno, por ejemplo, darse cuenta de si hemos girado la pantalla de un smartphone.Detectan magnitudes físicas o químicas.</p>
+                    </div> 
+                  </div>
+                </div> 
+                <div className='mostrarButtons'>  
+                  <div className='button5C'>
+                    <button className='buttonAccessDiv' onClick={onDisplayE5}>5</button>
+                  </div>
                 </div>
               </div>
             </section>        

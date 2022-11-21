@@ -1,7 +1,7 @@
 .divHeader{
-  padding: 1.19vw;
-  height: 14.82vw;
   width:  var(--widthMain);
+  height: 14.82vw;
+  padding: 1.19vw;
   margin: auto;
 }
 .header{

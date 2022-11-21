@@ -1,0 +1,47 @@
+.justifyButton5{    
+    justify-content: center;    /* Centrar Horizontalmente */
+}
+.justifyButton5A{    
+    justify-content: end;    /* Centrar Horizontalmente */
+    padding-right: 8vw;
+}
+.justifyButton5B{    
+    justify-content: start;    /* Centrar Horizontalmente */
+    padding-left: 8vw;
+}
+.button5C{    
+    width: var(--widthMain);
+    height: auto;
+    display: flex;
+    border: var(--borderSecundary) solid #eaf72d;   
+    justify-content: center;    /* Centrar Horizontalmente */
+}
+.divButtonGral5{      
+    width: 38vw;
+    height: auto;
+    display: flexbox;
+    border: var(--borderSecundary) solid #1d1d1c;    
+}
+.mostrarButtons5{      
+    width: 75.4vw;
+    height: auto;
+    display: inline-flex;   /* Centrar horizontalmente y equidistantes los eementos del div */  
+    border: var(--borderSecundary) solid #f76d2d;    
+}
+.cuadro5A{
+    display: flex;      /* Centra el boton dentro del div con ayuda de la clase .justifyButton5*/
+    border: var(--borderSecundary) solid #e3f72d;  
+  }
+/* DIV de los dos cuadros de texto */
+.cuadroGral5{       
+    width: auto;
+    display: flex;      /* Centra el cuadro de texto dentro del div */
+    justify-content: center;    /* Ubicación horizontalmente */
+    border: var(--borderSecundary) solid #ff29a6;
+  }
+  .paddCuadro5{     
+     margin: 1vw;
+  }
+  .widthVideo5{
+    width: 20vw;
+  }
