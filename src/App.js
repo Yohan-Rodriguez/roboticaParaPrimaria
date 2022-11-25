@@ -27,6 +27,12 @@ function App() {
   const [stateInfoE2, setStateInfoE2] = useState("divNoMostrar");
   const [stateInfoE3, setStateInfoE3] = useState("divNoMostrar");
   const [stateInfoE4, setStateInfoE4] = useState("divNoMostrar");
+  const [stateInfoE5, setStateInfoE5] = useState("divNoMostrar");
+  const [stateInfoF1, setStateInfoF1] = useState("divNoMostrar");
+  const [stateInfoF2, setStateInfoF2] = useState("divNoMostrar");
+  const [stateInfoF3, setStateInfoF3] = useState("divNoMostrar");
+  const [stateInfoF4, setStateInfoF4] = useState("divNoMostrar");
+  const [stateInfoF5, setStateInfoF5] = useState("divNoMostrar");
   const [stateInfoF, setStateInfoF] = useState("divNoMostrar");
   const [stateInfoG, setStateInfoG] = useState("divNoMostrar");
   const [stateInfoH, setStateInfoH] = useState("divNoMostrar");
@@ -63,7 +69,7 @@ function App() {
           if (stateInfoG==="divNoMostrar"){ setStateInfoG("divMostrarCuadro"); }
           else { setStateInfoG("divNoMostrar"); }
         } else if (stateGeneral === "displayH") {
-          if (stateInfoH==="divNoMostrar"){ setStateInfoH("divMostrarCuadro"); } 
+          if (stateInfoH ==="divNoMostrar"){ setStateInfoH("divMostrarCuadro"); } 
           else { setStateInfoH("divNoMostrar"); }
         } else if (stateGeneral === "displayI") {
           if (stateInfoI==="divNoMostrar"){ setStateInfoI("divMostrarCuadro"); } 
@@ -102,37 +108,51 @@ function App() {
     if (stateInfoD2==="divNoMostrar" && stateInfoD1==="divMostrarGral"){ setStateInfoD2(); }   /** Habilita cuadro derecho */
     else { setStateInfoD2("divNoMostrar"); }   /** Deshabilita cuadro derecho */
   } 
+  
   const onDisplayE1 = () => {   
     if (stateInfoE1==="divNoMostrar") { setStateInfoE1("divMostrarGral"); }   /** Habilita cuadro izquierdo */
-    else { setStateInfoE1("divNoMostrar"); }  /** Deshabilita cuadro izquierdo */
+    else { 
+      setStateInfoE1("divNoMostrar");  /** Deshabilita cuadro izquierdo */
+      setStateInfoE3("divNoMostrar");
+    }
   } 
   const onDisplayE2 = () =>{   
-    if (stateInfoE1==="divMostrarGral" && stateInfoE2==="divNoMostrar"){    /** Verifica si marco izquierdo se muestra en pantalla  */
-      setStateInfoE2();     /** Habilita cuadro derecho general */
-    } else { setStateInfoE2("divNoMostrar"); }
-  } 
+    if (stateInfoE1==="divMostrarGral" && stateInfoE3==="divNoMostrar"){    /** Verifica si marco izquierdo se muestra en pantalla  */
+    setStateInfoE2("divMostrarGral");     /** Habilita cuadro derecho general */
+    /** setStateInfoC4 se habilita con la función answerQue()*/
+  } else {
+    setStateInfoE2("divNoMostrar");       
+  }
+} 
   const onDisplayE3 = () =>{   
-    if (stateInfoE4==="divNoMostrar" && stateInfoE3==="divMostrarGral"){
+    if (stateInfoE4==="divNoMostrar"){
       setStateInfoE4("divMostrarGral");
     } else{
       setStateInfoE4("divNoMostrar");
     }
   } 
-  const onDisplayE4 = () =>{   
-    if (stateInfoE4==="divNoMostrar" && stateInfoE3==="divMostrarGral"){
-      setStateInfoE4("divMostrarGral");
-    } else{
-      setStateInfoE4("divNoMostrar");
+  const onDisplayF1 = () => {   
+    if (stateInfoF1==="divNoMostrar") { setStateInfoF1("divMostrarGral"); }   /** Habilita cuadro izquierdo */
+    else { 
+      setStateInfoF1("divNoMostrar");  /** Deshabilita cuadro izquierdo */
+      setStateInfoF3("divNoMostrar");
     }
   } 
-  const onDisplayE5 = () =>{   
-    if (stateInfoE4==="divNoMostrar" && stateInfoE3==="divMostrarGral"){
-      setStateInfoE4("divMostrarGral");
+  const onDisplayF2 = () =>{   
+    if (stateInfoF1==="divMostrarGral" && stateInfoF3==="divNoMostrar"){    /** Verifica si marco izquierdo se muestra en pantalla  */
+    setStateInfoF2("divMostrarGral");     /** Habilita cuadro derecho general */
+    /** setStateInfoC4 se habilita con la función answerQue()*/
+  } else {
+    setStateInfoF2("divNoMostrar");       
+  }
+} 
+  const onDisplayF3 = () =>{   
+    if (stateInfoF4==="divNoMostrar"){
+      setStateInfoF4("divMostrarGral");
     } else{
-      setStateInfoE4("divNoMostrar");
+      setStateInfoF4("divNoMostrar");
     }
   } 
-
   // PREGUNTAS: -----------------------------------------------------------------------------------------
   const answerQue = () =>{
     if (document.querySelector('input[name=answer]:checked').value === "1"){     /** Verifica validez de la respuesta */    
@@ -144,7 +164,16 @@ function App() {
       } else if (labelId === "labelAnswerE"){
         setStateInfoE2("divNoMostrar");     /** Oculta marco derecho pregunta */
         setStateInfoE3("divMostrarGral");    /** Habilita marco derecho respuesta correcta */
-      }       
+        
+      } else if (labelId === "labelAnswerE1"){
+       setStateInfoE5("divMostrarGral");    /** Habilita marco derecho respuesta correcta */
+      }  else if (labelId === "labelAnswerF"){
+        setStateInfoF2("divNoMostrar");     /** Oculta marco derecho pregunta */
+        setStateInfoF3("divMostrarGral");    /** Habilita marco derecho respuesta correcta */
+        
+      } else if (labelId === "labelAnswerF1"){
+       setStateInfoF5("divMostrarGral");    /** Habilita marco derecho respuesta correcta */
+      }                       
     }
     else{
       alert("Respuesta Incorrecta. Try again!");
@@ -378,18 +407,96 @@ function App() {
                 </div>
               </div>  
               <div className={stateInfoE}>      {/** Contenido de la sección */}
-                <div className='mostrarButtons5'>  
-                  <div className='divButtonGral5'>
-                    <div className='cuadro5A justifyButton5A'>
-                      <button className='buttonAccessDiv' onClick={onDisplayE2}>2</button>
+                <div className='mostrarButtons5'>
+                  <div className='cuadro5A justify5A'>
+                    <button className='buttonAccessDiv' onClick={onDisplayE1}>1</button>
+                  </div>
+                  <div className={stateInfoE1}>
+                    <div className='cuadroIn5A justify5A'>
+                      <div className='divCuadroGral'>
+                        <p className='textCuadrosGral'>Del mismo modo que los seres vivos se guían por los sentidos, los robots utilizan los sensores. Su función es la de recabar información del entorno, por ejemplo, darse cuenta de si hemos girado la pantalla de un smartphone.Detectan magnitudes físicas o químicas.</p>
+                      </div> 
                     </div>
                   </div>
-                  <aside className='divButtonGral5'>
-                    <div className='cuadro5A justifyButton5B'>
-                      <button className='buttonAccessDiv buttonAccessDiv2' onClick={onDisplayE3}>3</button>
+                  <div className='cuadro5A justify5B'>
+                    <button className='buttonAccessDiv' onClick={onDisplayE2}>2</button>
+                    <div className={stateInfoE2}>
+                      <div className='cuadroIn paddingA'>
+                        <div className='divCuadroGral textCuadrosGral'>
+                          <h1 className="container textCuadrosGral" htmlFor='answer'>Si los sensores en los robots actuan igual que los sentidos en los seres humanos, ¿es correcto afirmar que un robot con ayuda de sus sensores puede esquivar obstáculos?:</h1>
+                            <label className="container textCuadrosGral">True.
+                              <input id='labelAnswerE' type="radio" name="answer" value="1"></input>
+                              <span className="checkmark"></span>
+                            </label>
+                            <label className="container textCuadrosGral">False.
+                              <input id='labelAnswerE' type="radio" name="answer" value="2"></input>
+                              <span className="checkmark"></span>
+                            </label>                                 
+                            <aside className='divbuttonAnswer'>
+                              <button className='buttonAnswer' onClick={answerQue}>Responder</button>                        
+                            </aside>
+                        </div> 
+                      </div>
                     </div>
-                  </aside>
+                    <div className={stateInfoE3}>
+                      <iframe className="videoOne widthVideo5" src="https://www.youtube.com/embed/K_JYeWux0VQ" title="Actuadores en robótica" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>                                           
+                    </div>
+                  </div>
+                  <div className='cuadro5A justify5B'>
+                    <button className='buttonAccessDiv' onClick={onDisplayE3}>3</button>
+                    <div className={stateInfoE4}>
+                      <div className='cuadroIn paddingA'>
+                        <div className='divCuadroGral textCuadrosGral'>
+                          <h1 className="container textCuadrosGral" htmlFor='answer'>Algunos ejemplos de actuadores en robótica son:</h1>
+                            <label className="container textCuadrosGral">Motores, Servomotores y bujias.
+                              <input id='labelAnswerE1' type="radio" name="answer" value="2"></input>
+                              <span className="checkmark"></span>
+                            </label>
+                            <label className="container textCuadrosGral">Motores, Servomotores y pantallas.
+                              <input id='labelAnswerE1' type="radio" name="answer" value="1"></input>
+                              <span className="checkmark"></span>
+                            </label>                                 
+                            <aside className='divbuttonAnswer'>
+                              <button className='buttonAnswer' onClick={answerQue}>Responder</button>                        
+                            </aside>
+                        </div> 
+                        <div className={stateInfoE5}>
+                          <iframe className="videoOne widthVideo5" src="https://www.youtube.com/embed/2SHQTUvvVuM" title="Sistemas de control - Robótica" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>                                           
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+
+
+
+
+
+                {/* <div className='mostrarButtons5'>  
+                  <aside className='cuadro5A justifyButton5A'>
+                    <button className='buttonAccessDiv buttonAccessDiv2' onClick={onDisplayE4}>3</button>
+                  </aside>
+                  <div className='cuadro5A'>
+                    <button className='buttonAccessDiv' onClick={onDisplayE2}>2</button>
+                  </div>
+                  <aside className='cuadro5A justifyButton5B'>
+                    <button className='buttonAccessDiv buttonAccessDiv2' onClick={onDisplayE3}>4</button>
+                  </aside>
+                  <div className='cuadro5A'>
+                    <button className='buttonAccessDiv' onClick={onDisplayE1}>1</button>
+                  </div>
+                  <div className='button5C'>
+                    <button className='buttonAccessDiv' onClick={onDisplayE5}>5</button>
+                  </div>
+                </div>
+
+
                 <div className={stateInfoE2}>
                   <div className='cuadroIn'>
                     <div className='divCuadroGral textCuadrosGral'>
@@ -413,13 +520,7 @@ function App() {
                 </div>
                 <div className='mostrarButtons5'>  
                   <div className='divButtonGral5'>
-                    <div className='cuadro5A justifyButton5'>
-                      <button className='buttonAccessDiv' onClick={onDisplayE1}>1</button>
-                    </div>
                   </div>
-                  <aside className='divButtonGral justifyButton5'>
-                    <button className='buttonAccessDiv buttonAccessDiv2' onClick={onDisplayE4}>4</button>
-                  </aside>
                 </div>
                 <div className={stateInfoE1}>
                   <div className='cuadroGral5'>
@@ -430,10 +531,7 @@ function App() {
                   </div>
                 </div> 
                 <div className='mostrarButtons'>  
-                  <div className='button5C'>
-                    <button className='buttonAccessDiv' onClick={onDisplayE5}>5</button>
-                  </div>
-                </div>
+                </div> */}
               </div>
             </section>        
             {/** SECCIOÓN SEIS:TIPOS DE MOVIMIENTOS ------------------------------------------------------------------------------*/}
@@ -449,10 +547,67 @@ function App() {
                 </div>
               </div>  
               <div className={stateInfoF}>      {/** Contenido de la sección */}
-                <div className='containerSecc'>
-                  <h1>Prueba contenido</h1>
+                <div className='mostrarButtons5'>
+                  <div className='cuadro5A justify5A'>
+                    <button className='buttonAccessDiv' onClick={onDisplayF1}>1</button>
+                  </div>
+                  <div className={stateInfoF1}>
+                    <div className='cuadroIn5A justify5A'>
+                      <div className='divCuadroGral'>
+                        <p className='textCuadrosGral'>Actualmente existen diversos tipos de robots para responder a necesidades cada vez más específicas. El mundo de la robótica avanza a pasos agigantados, por lo que es probable que veamos el avance, cada vez más acelerado, de esta industria.</p>
+                      </div> 
+                    </div>
+                  </div>
+                  <div className='cuadro5A justify5B'>
+                    <button className='buttonAccessDiv' onClick={onDisplayF2}>2</button>
+                    <div className={stateInfoF2}>
+                      <div className='cuadroIn paddingA'>
+                        <div className='divCuadroGral textCuadrosGral'>
+                          <h1 className="container textCuadrosGral" htmlFor='answer'>¿El mundo de la robótica avanza a pasos agigantados?:</h1>
+                            <label className="container textCuadrosGral">True.
+                              <input id='labelAnswerF' type="radio" name="answer" value="1"></input>
+                              <span className="checkmark"></span>
+                            </label>
+                            <label className="container textCuadrosGral">False.
+                              <input id='labelAnswerF' type="radio" name="answer" value="2"></input>
+                              <span className="checkmark"></span>
+                            </label>                                 
+                            <aside className='divbuttonAnswer'>
+                              <button className='buttonAnswer' onClick={answerQue}>Responder</button>                        
+                            </aside>
+                        </div> 
+                      </div>
+                    </div>
+                    <div className={stateInfoF3}>
+                      <iframe className="videoOne widthVideo5" src="https://www.youtube.com/embed/f2SMNKuw0AM" title="Clasificación de los robots" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>                                           
+                    </div>
+                  </div>
+                  <div className='cuadro5A justify5B'>
+                    <button className='buttonAccessDiv' onClick={onDisplayF3}>3</button>
+                    <div className={stateInfoF4}>
+                      <div className='cuadroIn paddingA'>
+                        <div className='divCuadroGral textCuadrosGral'>
+                          <h1 className="container textCuadrosGral" htmlFor='answer'>Los robots zoomórficos son:</h1>
+                            <label className="container textCuadrosGral">Comunes en los almacenes o industrias para llevar materiales.
+                              <input id='labelAnswerF1' type="radio" name="answer" value="2"></input>
+                              <span className="checkmark"></span>
+                            </label>
+                            <label className="container textCuadrosGral">Inspirados en seres vivos y se ven en juguetes o haciendo misiones en el espacio.
+                              <input id='labelAnswerF1' type="radio" name="answer" value="1"></input>
+                              <span className="checkmark"></span>
+                            </label>                                 
+                            <aside className='divbuttonAnswer'>
+                              <button className='buttonAnswer' onClick={answerQue}>Responder</button>                        
+                            </aside>
+                        </div> 
+                        <div className={stateInfoF5}>
+                          <iframe className="videoOne widthVideo5" src="https://www.youtube.com/embed/2SHQTUvvVuM" title="Sistemas de control - Robótica" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>                                           
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+                </div>
             </section>        
             {/** SECCIOÓN SIETE: ROBOT CASERO ------------------------------------------------------------------------------*/}
             <section className='containerSecc' id="robot">            
@@ -466,84 +621,11 @@ function App() {
                   </aside>
                 </div>
               </div>  
-              <div className={stateInfoG}>      {/** Contenido de la sección */}
-                <div className='containerSecc'>
-                  <h1>Prueba contenido</h1>
-                </div>
-              </div>
-            </section>        
-            {/** SECCIOÓN OCHO: INTRODUCCIÓN A LA PROGRAMACIÓN ------------------------------------------------------------------------------*/}
-            <section className='containerSecc' id="programacion">            
-              <div className="divSecc">     {/** este div contiene el titulo y button "V" */}
-                <div className='positionTittle'>     {/** Titulo de la sección */}                  
-                  <button className='textDiv' onClick={onDisplay} id="displayH" name="menu"><a href="#programacion">Introducción a la programación</a></button>
-                </div>
-                <div className="asideButton">     {/** button "V" */}
-                  <aside>
-                    <button className='buttonMostrar' onClick={onDisplay} id="displayH" name="menu"><a href="#programacion">V</a></button>
-                  </aside>
-                </div>
+              <div className={stateInfoG}>
+                <iframe className="videoOne widthVideo5" src="https://www.youtube.com/embed/9JnvfEMWZs4" title="Como Hacer Un Robot Casero En 3 Minutos | Súper Fácil" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>                                           
               </div>  
-              <div className={stateInfoH}>      {/** Contenido de la sección */}
-                <div className='containerSecc'>
-                  <h1>Prueba contenido</h1>
-                </div>
-              </div>
             </section>        
-            {/** SECCIOÓN NUEVE: BLOQUES Vs CÓDIGO ------------------------------------------------------------------------------*/}
-            <section className='containerSecc' id="bloques-codigo">            
-              <div className="divSecc">     {/** este div contiene el titulo y button "V" */}
-                <div className='positionTittle'>     {/** Titulo de la sección */}                  
-                  <button className='textDiv' onClick={onDisplay} id="displayI" name="menu"><a href="#bloques-codigo">Programación por bloques Vs Código</a></button>
-                </div>
-                <div className="asideButton">     {/** button "V" */}
-                  <aside>
-                    <button className='buttonMostrar' onClick={onDisplay} id="displayI" name="menu"><a href="#bloques-codigo">V</a></button>
-                  </aside>
-                </div>
-              </div>  
-              <div className={stateInfoI}>      {/** Contenido de la sección */}
-                <div className='containerSecc'>
-                  <h1>Prueba contenido</h1>
-                </div>
-              </div>
-            </section>        
-            {/** SECCIOÓN DIEZ: cONCEPTOS DE PROGRAMACIÓN POR CÓDIGO ------------------------------------------------------------------------------*/}
-            <section className='containerSecc' id="programacion-codigo">            
-              <div className="divSecc">     {/** este div contiene el titulo y button "V" */}
-                <div className='positionTittle'>     {/** Titulo de la sección */}                  
-                  <button className='textDiv' onClick={onDisplay} id="displayJ" name="menu"><a href="#programacion-codigo">Programación básica por código</a></button>
-                </div>
-                <div className="asideButton">     {/** button "V" */}
-                  <aside>
-                    <button className='buttonMostrar' onClick={onDisplay} id="displayJ" name="menu"><a href="#programacion-codigo">V</a></button>
-                  </aside>
-                </div>
-              </div>  
-              <div className={stateInfoJ}>      {/** Contenido de la sección */}
-                <div className='containerSecc'>
-                  <h1>Prueba contenido</h1>
-                </div>
-              </div>
-            </section>        
-            {/** SECCIOÓN ONCE: PROGRAMANDO MI PRIMER ROBOT ------------------------------------------------------------------------------*/}
-            <section className='containerSecc' id="programacion-robot">            
-              <div className="divSecc">     {/** este div contiene el titulo y button "V" */}
-                <div className='positionTittle'>     {/** Titulo de la sección */}                  
-                  <button className='textDiv' onClick={onDisplay} id="displayK" name="menu"><a href="#programacion-robot">Mi primer robot programado</a></button>
-                </div>
-                <div className="asideButton">     {/** button "V" */}
-                  <aside>
-                    <button className='buttonMostrar' onClick={onDisplay} id="displayK" name="menu"><a href="#programacion-robot">V</a></button>
-                  </aside>
-                </div>
-              </div>  
-              <div className={stateInfoK}>      {/** Contenido de la sección */}
-                <div className='containerSecc'>
-                  <h1>Prueba contenido</h1>
-                </div>
-              </div>
-            </section>        
+            
           </body>
           {/** FOOTER ------------------------------------------------------------------------------------------------------------------ */}
           <footer>

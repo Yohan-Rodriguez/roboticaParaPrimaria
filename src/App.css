@@ -120,14 +120,12 @@ a:hover{
   width: 75.4vw;
   height: auto;
   display: inline-flex;   /* Centrar horizontalmente y equidistantes los eementos del div */  
-  border: var(--borderSecundary) solid #f76d2d;    
 }
 /* Posición del botón dentro del div de él */
 .divButtonGral{      
   width: 38vw;
   height: auto;
   display: flex;
-  border: var(--borderSecundary) solid #bcc265;    
 }
 /* Estilos de los botones de acceso a los div´s de cada sección*/
 .buttonAccessDiv{
@@ -146,7 +144,6 @@ a:hover{
 /* Div´s cuadro de texto de cada sección al habilitar los botones */
 .cuadroGral{       /* DIV de los dos cuadros de texto */
   width: auto;
-  border: var(--borderSecundary) solid #ff29a6;
 }
 /* Div individual dentro del div .cuadroGral */
 .cuadroIn{
